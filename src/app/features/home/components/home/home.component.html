@@ -1,0 +1,74 @@
+<app-home-header></app-home-header>
+
+<section class="max-w-4xl mb-12">
+    <img src="https://preview.cruip.com/devspace/images/me.jpg" alt="Foto de perfil"
+        class="rounded-full w-16 h-16 mb-6">
+    <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+        Escribo sobre el camino del <span class="text-blue-500">desarrollador </span>
+    </h1>
+    <p class="text-gray-500 mt-4 text-base md:text-lg">
+        Exploro el oficio del desarrollo, desde patrones hasta refactorizaciones con mate en mano. Me gusta cuestionar
+        lo que damos por sentado y escribir sobre lo que no sale en los tutoriales.
+    </p>
+</section>
+
+<div class="flex flex-col lg:flex-row">
+    <div class="w-full lg:w-2/3 lg:pr-10">
+        <h2 class="text-2xl font-bold mb-6">Cuaderno de desarrollo</h2>
+
+        <div class="flex space-x-8 border-b mb-8 overflow-x-auto pb-2">
+            <a href="#"
+                class="text-blue-500 border-b-2 border-blue-500 pb-2 font-semibold whitespace-nowrap">Enlaces</a>
+            <a href="#" class="text-gray-500 pb-2 font-semibold whitespace-nowrap">Diario técnico</a>
+            <a href="#" class="text-gray-500 pb-2 font-semibold whitespace-nowrap">Código con opinión</a>
+        </div>
+
+        <div class="space-y-8">
+            <article class="flex flex-col sm:flex-row items-start sm:items-center">
+                <img src="./assets/refactoring-guru.png" alt="Miniatura del artículo"
+                    class="w-full sm:w-36 h-auto sm:h-36 rounded-lg mr-0 sm:mr-6 mb-4 sm:mb-0">
+                <div class="flex-1">
+                    <p class="text-gray-500 text-sm mb-2">ENE 12, 2020</p>
+                    <h3 class="text-xl font-bold mb-2">Refactoring.guru</h3>
+                    <p class="text-gray-500 mb-4">
+                        Es un sitio educativo enfocado en buenas prácticas de programación. Explica de forma clara y
+                        visual conceptos como refactorización, patrones de diseño, principios SOLID y malos olores en el
+                        código.
+                    </p>
+                </div>
+                <a href="https://refactoring.guru/" target="_blank" class="text-blue-500 ml-auto hidden sm:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="flex flex-col sm:flex-row items-start sm:items-center">
+                <img src="./assets/roadmap.png" alt="Miniatura del artículo"
+                    class="w-full sm:w-36 h-auto sm:h-36 rounded-lg mr-0 sm:mr-6 mb-4 sm:mb-0">
+                <div class="flex-1">
+                    <p class="text-gray-500 text-sm mb-2">DEC 24, 2023</p>
+                    <h3 class="text-xl font-bold mb-2">RoadMap.sh</h3>
+                    <p class="text-gray-500 mb-4">
+                        Es una plataforma colaborativa que ofrece mapas de ruta (roadmaps), guías y recursos educativos
+                        para ayudar a los desarrolladores a planificar y seguir un camino de aprendizaje en diversas
+                        áreas del desarrollo de software. Estos roadmaps están organizados por roles (como desarrollador
+                        frontend, backend, DevOps, etc.) y por habilidades específicas (como JavaScript, Python, SQL,
+                        etc.) .
+                    </p>
+                </div>
+                <a href="https://roadmap.sh/" class="text-blue-500 ml-auto hidden sm:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </article>
+        </div>
+    </div>
+    <app-subscription-panel></app-subscription-panel>
+
+</div>

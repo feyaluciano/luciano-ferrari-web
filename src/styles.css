@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* You can add custom fonts here if you wish */
+body {
+    font-family: 'Inter', sans-serif;
+}
