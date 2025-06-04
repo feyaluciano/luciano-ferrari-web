@@ -16,8 +16,6 @@ export class NotebookSheetComponent {
     constructor(private route: ActivatedRoute) {
         this.route.params.subscribe(params => {
             const id = params['id'];
-            //alert(id);
-            // Aquí puedes usar el ID para cargar los datos correspondientes
         });
     }
 } 
