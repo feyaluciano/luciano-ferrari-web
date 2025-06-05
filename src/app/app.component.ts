@@ -5,7 +5,7 @@ import { HomeHeaderComponent } from './features/home/components/home-header/home
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet,SidebarComponent,HomeHeaderComponent,HomeHeaderComponent],
+    imports: [RouterOutlet,SidebarComponent,HomeHeaderComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
