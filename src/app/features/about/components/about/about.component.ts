@@ -7,11 +7,7 @@ import { SubscriptionPanelComponent } from '../../../../shared/components/subscr
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
-  showAlert() {
-    alert('Seguir con ete aboit, ver la imagen como queda , hacerla mas ancha o ver como rellenar al costado derecho.. seguir con resume');
-  }
-  ngOnInit() {
-    this.showAlert();
+export class AboutComponent {  
+  ngOnInit() {    
   }
 }
