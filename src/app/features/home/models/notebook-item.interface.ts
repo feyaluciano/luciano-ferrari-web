@@ -53,8 +53,5 @@ export interface NotebookItem {
      * Útil para futuras funcionalidades de búsqueda o filtrado.
      */
     tags?: string[];
-  
-    // Puedes añadir más atributos si los necesitas en el futuro, por ejemplo:
-    // author?: string;
-    // readTimeMinutes?: number;
+      
   }
