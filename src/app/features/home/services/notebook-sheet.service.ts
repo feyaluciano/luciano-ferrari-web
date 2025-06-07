@@ -16,13 +16,13 @@ export class NotebookSheetService {
   private notebookData: NotebookItem[] = [
     // --- Contenido para la solapa "Enlaces" ---
     {
-      id: 'enlace-refactoring-guru',
+      id: '1',
       date: 'FEB 12, 2020',
       title: 'Refactoring.guru',
       description: 'Es un sitio educativo enfocado en buenas prácticas de programación. Explica de forma clara y visual conceptos como refactorización, patrones de diseño, principios SOLID y malos olores en el código.',
       imageUrl: './assets/refactoring-guru.png',
       category: 'enlaces',
-      externalLink: 'https://refactoring.guru/', // Enlace real
+      externalLink: 'notebook-sheet/1', // Enlace real
       content: 'Refactoring.guru es una referencia indispensable para cualquier desarrollador que busque mejorar la calidad de su código. Sus explicaciones son concisas y sus diagramas, muy útiles.'
     },
     {
