@@ -15,24 +15,24 @@ export class ProjectsService {
   // Esto simula una base de datos o una fuente de datos externa.
   private projectsData: ProjectItem[] = [
     {
-      id: '1',
+      id: 'boton-anti-panico',
       date: 'MAY 20, 2024',
       title: 'Botón anti pánico',
       description: 'Aplicación mobile y backoffice web para la administración y seguimiento de alertas de víctimas de violencia de género',
       imageUrl: './assets/proyectos/logobap.png',
-      externalLink: 'https://github.com/LucianoFerrari/angular-firebase-chat', // Ejemplo de enlace a GitHub
+      externalLink: 'projects-view/boton-anti-panico', 
       content: 'Este proyecto fue un desafío interesante para aprender sobre la integración de Angular con servicios de backend en tiempo real como Firebase. Se implementaron autenticación de usuarios, envío y recepción de mensajes, y persistencia de datos.',
       tags: ['Angular', 'Firebase', 'Firestore', 'TypeScript', 'TailwindCSS'],
       tecnologies: 'Angular .NET Ionic',
       order: 1
     },
     {
-        id: '2',
+        id: 'tramites-online',
         date: 'JUN 01, 2024',
         title: 'Plataforma de Trámites Municipales Online',
         description: 'Portal web integral para gestionar trámites municipales como tasas, habilitaciones, visado de planos, timbrado y más.',
         imageUrl: './assets/proyectos/tramitesb.png',
-        externalLink: '', 
+        externalLink: 'projects-view/tramites-online', 
         content: 'Este proyecto consistió en el desarrollo completo de una plataforma para gestionar trámites municipales desde la web. Implementé funcionalidades como login y registro de usuarios, recuperación de credenciales, y múltiples flujos para la gestión de tasas (inmuebles, comercios, rodados), visado de planos, timbrados, habilitaciones comerciales, carga de CV en RRHH, y libre deuda. Se integraron medios de pago como tarjeta, homebanking, Mercado Pago y generación de comprobantes para Pago Fácil, Rapi Pago y Bapro Pagos. La aplicación brinda una experiencia centralizada para que los ciudadanos puedan gestionar trámites sin necesidad de asistir físicamente.',
         tags: ['Angular', '.NET', 'Autenticación', 'Pagos online', 'UX/UI'],
         tecnologies: 'PHP JQuery CSS Mysql',

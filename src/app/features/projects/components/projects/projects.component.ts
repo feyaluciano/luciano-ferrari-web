@@ -5,12 +5,17 @@ import { ProjectsService } from '../../services/projects.service';
 import { HomeHeaderComponent } from '../../../home/components/home-header/home-header.component';
 import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { ProjectCardComponent } from '../project-card/project-card.component';
-
+import { ProjectItemComponent } from '../project-item/project-item.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [HomeHeaderComponent,SubscriptionPanelComponent,ProjectCardComponent, AsyncPipe,CommonModule],
+  imports: [
+    HomeHeaderComponent,
+    SubscriptionPanelComponent,
+    ProjectItemComponent,
+    AsyncPipe,
+    CommonModule
+  ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })

@@ -28,7 +28,7 @@
         -->
         <div *ngIf="projects$ | async as projects; else loading">         
           <div *ngIf="projects.length > 0; else noProjects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">            
-            <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+            <app-project-item *ngFor="let project of projects" [project]="project"></app-project-item>
           </div>         
           <ng-template #noProjects>
             <p class="text-gray-600 text-center py-10">No hay proyectos para mostrar en este momento.</p>
