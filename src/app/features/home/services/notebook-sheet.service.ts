@@ -57,41 +57,78 @@ export class NotebookSheetService {
     },
 
     // --- Contenido para la solapa "Diario técnico" ---
+   // ... (dentro del array notebookData)
+
+{
+  id: 'diario-refactor-func-delegates',
+  date: 'JUN 10, 2025',
+  title: 'Refactorizando con Func<>: De Código Duplicado a una Solución Elegante',
+  description: 'Cómo eliminé la duplicación de código en C# al abstraer la lógica común y pasar los métodos específicos del repositorio como delegados Func<>.',
+  imageUrl: 'https://placehold.co/600x400/E3F2FD/1976D2?text=Refactoring',
+  category: 'diario-tecnico',
+  externalLink: 'notebook-sheet/diario-refactor-func-delegates',
+  content: `
+    <p>Hoy dediqué un tiempo a refactorizar una parte del código que me venía haciendo ruido. Tenía tres métodos en mi capa de <br> servicio que eran casi idénticos.<br>
+     Su objetivo era obtener listas de registros para diferentes vistas de una tabla (Mis Registros, Revisiones y Aprobaciones, y Aprobados), pero  <br>la estructura era la misma:<br>
+      obtener usuario, verificar permisos, construir filtros, llamar al repositorio para el conteo total y luego para obtener los datos paginados.</p>
+    <p class="mt-4">La duplicación era evidente y un claro "code smell". Sabía que si necesitaba cambiar la lógica de filtrado o de permisos,<br> tendría que hacerlo <br>
+    en tres lugares distintos, lo cual es propenso a errores y difícil de mantener.</p>
+    
+    <h3 class="text-xl font-semibold mt-6 mb-4">El Problema: Código Repetido</h3>
+    
+    <p>La estructura de los tres métodos públicos era la misma, lo único que cambiaba era la llamada final a los métodos del repositorio. <br> Se veían así:</p>
+    
+    <img 
+            class="max-w-full h-auto rounded-lg shadow-md" 
+            src="./assets/diario-tecnico/diario-refactor-func-delegates/diario-refactor-func-delegates1.png" 
+            >
+    <h3 class="text-xl font-semibold mt-6 mb-4">La Solución: Abstraer lo Común y Parametrizar lo Variable</h3>
+    
+    <p>La clave fue darme cuenta de que la "estrategia" para obtener el conteo y los datos era lo único que variaba. <br>
+    El resto era un proceso fijo. Aquí es donde los delegados <code>Func&lt;T&gt;</code> en C# brillan.</p>
+    <p class="mt-4">Decidí crear un único método privado, <code>ObtenerRegistrosAsync</code>, que contuviera toda la lógica común.
+     Este método aceptaría como parámetros las dos funciones que necesitaba ejecutar y que eran diferentes en cada caso: una para obtener el  total y otra para obtener la lista de registros.</p>
+    
+    <p class="mt-4">Así, los métodos públicos se transformaron en simples llamadas a este nuevo método privado, pasándole las funciones  <br>correspondientes del repositorio.
+     El resultado es un código mucho más limpio y DRY (Don't Repeat Yourself).</p>
+
+      <img 
+            class="max-w-full h-auto rounded-lg shadow-md" 
+            src="./assets/diario-tecnico/diario-refactor-func-delegates/diario-refactor-func-delegates2.svg" 
+            >
+
+              <h3 class="text-xl font-semibold mt-6 mb-4">El Método Genérico</h3>
+    <p>Y aquí está la magia. Este método privado ahora centraliza toda la lógica. Si mañana necesito cambiar cómo se gestionan los permisos, lo hago en un solo lugar.</p>
+
+     <img 
+            class="max-w-full h-auto rounded-lg shadow-md" 
+            src="./assets/diario-tecnico/diario-refactor-func-delegates/diario-refactor-func-delegates3.svg" />
+
+             <p class="mt-6">Estoy muy satisfecho con el resultado. El código no solo es más limpio y fácil de leer, sino que también es mucho más mantenible y escalable. Si en el futuro se necesita una nueva vista de "Registros Rechazados", por ejemplo, solo tendría que agregar los dos métodos al repositorio y un nuevo método público de una línea en el servicio.</p>
+   
+  `
+},
+
+
     {
-      id: 'diario-singleton',
-      date: 'MAY 10, 2024',
-      title: 'Patrones de Diseño en TypeScript: Singleton',
-      description: 'Explorando la implementación y casos de uso del patrón de diseño Singleton en aplicaciones TypeScript.',
-      imageUrl: 'https://placehold.co/600x400/E3F2FD/1976D2?text=Singleton+Pattern',
+      id: 'diario-papercut-smtp',
+      date: 'JUN 07, 2024',
+      title: 'Descubriendo PaperCut SMTP: Un servidor SMTP para desarrollo',
+      description: 'Una herramienta práctica y ligera que simula un servidor SMTP para capturar y visualizar correos electrónicos durante el desarrollo, sin enviarlos realmente.',
+      imageUrl: './assets/diario-tecnico/papercut/papercut.png',
       category: 'diario-tecnico',
-      content: 'Hoy profundicé en el patrón Singleton. Es útil para asegurar que una clase tenga una sola instancia, pero hay que tener cuidado con su uso excesivo, ya que puede introducir acoplamiento.'
-    },
-    {
-      id: 'diario-angular-perf',
-      date: 'ABR 22, 2024',
-      title: 'Optimización de rendimiento en Angular',
-      description: 'Técnicas clave para mejorar la velocidad y eficiencia de tus aplicaciones Angular, desde lazy loading hasta OnPush strategy.',
-      imageUrl: 'https://placehold.co/600x400/FCE4EC/C2185B?text=Angular+Perf',
-      category: 'diario-tecnico',
-      content: 'Revisé las estrategias de detección de cambios en Angular y cómo `OnPush` puede ser un gran aliado para el rendimiento. También experimenté con el lazy loading de módulos.'
-    },
-    {
-      id: 'diario-webassembly',
-      date: 'MAR 15, 2024',
-      title: 'Introducción a WebAssembly (Wasm)',
-      description: 'Un primer vistazo a WebAssembly: qué es, por qué es importante y cómo puedes empezar a usarlo en tus proyectos web.',
-      imageUrl: 'https://placehold.co/600x400/FFF8E1/FFC107?text=WebAssembly',
-      category: 'diario-tecnico',
-      content: 'WebAssembly promete revolucionar el rendimiento en el navegador. Aunque aún es temprano para muchos casos de uso, su potencial para aplicaciones intensivas en CPU es enorme.'
-    },
-    {
-      id: 'diario-rxjs-operators',
-      date: 'FEB 05, 2024',
-      title: 'Dominando los operadores de RxJS',
-      description: 'Un estudio profundo de los operadores más comunes y cómo encadenarlos para manejar flujos de datos complejos de forma reactiva.',
-      imageUrl: 'https://placehold.co/600x400/CFD8DC/607D8B?text=RxJS+Operators',
-      category: 'diario-tecnico',
-      content: 'RxJS es una librería poderosa, pero sus operadores pueden ser abrumadores al principio. Me enfoqué en `map`, `filter`, `switchMap` y `debounceTime` hoy. ¡Son esenciales!'
+      externalLink: 'notebook-sheet/diario-papercut-smtp',      
+      content: `
+        <p>Hoy me encontré con una joya de herramienta para el desarrollo: PaperCut SMTP. Me ha sorprendido lo increíblemente fácil que es de usar. Básicamente, es un servidor SMTP falso que se ejecuta localmente y captura todos los correos que tu aplicación intenta enviar.</p>
+        <p class="mt-4">La gran ventaja es que puedes ver cómo se verían los correos (HTML, texto, encabezados, etc.) directamente en su interfaz, sin tener que configurar un servidor de correo real ni arriesgarte a enviar emails de prueba a destinatarios reales. Es ideal para etapas de desarrollo y testing, cuando necesitas verificar que la funcionalidad de envío de correos funciona correctamente sin el lío de gestionar credenciales o servicios de terceros.</p>
+        
+        <div class="mt-8 flex justify-center">
+          <img 
+            class="w-4/5 h-auto rounded-lg shadow-md" 
+            src="./assets/diario-tecnico/papercut/papercut-ui.png" 
+            alt="Interfaz de PaperCut SMTP">
+        </div>
+      `
     },
 
     // --- Contenido para la solapa "Código con opinión" ---
