@@ -62,7 +62,7 @@ export class NotebookSheetService {
 {
   id: 'diario-refactor-func-delegates',
   date: 'JUN 10, 2025',
-  title: 'Refactorizando con Func<>: De Código Duplicado a una Solución Elegante',
+  title: 'Refactorizando con Func<>: De Código Duplicado a una Solución Elegante (Strategy Pattern)',
   description: 'Cómo eliminé la duplicación de código en C# al abstraer la lógica común y pasar los métodos específicos del repositorio como delegados Func<>.',
   imageUrl: 'https://placehold.co/600x400/E3F2FD/1976D2?text=Refactoring',
   category: 'diario-tecnico',
@@ -103,6 +103,19 @@ export class NotebookSheetService {
      <img 
             class="max-w-full h-auto rounded-lg shadow-md" 
             src="./assets/diario-tecnico/diario-refactor-func-delegates/diario-refactor-func-delegates3.svg" />
+
+           <h3 class="text-xl font-semibold mt-6 mb-4"> Un Toque de Diseño: Aplicando el Strategy Pattern</h3>
+<p>Lo interesante es que, sin darme cuenta al principio, lo que estaba aplicando es un patrón de diseño conocido: el Strategy Pattern.
+
+Este patrón consiste en encapsular diferentes algoritmos o comportamientos (en este caso, cómo obtener el total y cómo obtener los datos) y pasarlos como parámetros, permitiendo que una misma estructura (mi método ObtenerRegistrosAsync) ejecute distintas estrategias según el caso.
+
+En lugar de tener condicionales o duplicar código, simplemente inyecto la estrategia adecuada como un Func<>.
+
+Esto no solo reduce la duplicación, sino que también me permite cambiar el comportamiento sin modificar el método genérico, solo cambiando los métodos que le paso.
+
+En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo de solución de forma concisa y legible. Y si te gusta la programación funcional, esto es un buen ejemplo de una higher-order function: una función que recibe funciones como parámetros.
+</p>
+
 
              <p class="mt-6">Estoy muy satisfecho con el resultado. El código no solo es más limpio y fácil de leer, sino que también es mucho más mantenible y escalable. Si en el futuro se necesita una nueva vista de "Registros Rechazados", por ejemplo, solo tendría que agregar los dos métodos al repositorio y un nuevo método público de una línea en el servicio.</p>
    

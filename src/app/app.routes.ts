@@ -15,6 +15,11 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'projects-view/:id', component: ProjectViewComponent },
+    {
+      path: 'about-this-site', // ¡Nueva ruta para la historia de la web!
+      loadComponent: () => import('./features/about-this-site/components/about-this-site.component').then(m => m.AboutThisSiteComponent),
+      title: 'Luciano Ferrari - Cómo hice esta web'
+    },
 
     // { path: 'resume', component: ResumeComponent },
     { path: '**', redirectTo: '/home' }
