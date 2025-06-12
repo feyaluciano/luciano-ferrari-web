@@ -1,46 +1,38 @@
 <aside class="fixed bottom-0 left-0 z-50 w-full bg-white border-t md:relative md:w-20 md:h-screen md:border-r md:border-t-0">
     
-    <div class="hidden md:flex md:flex-col md:items-center md:mb-6 md:pt-8 ">
-        <img src="./assets/me.jpg" alt="Foto de perfil Escritorio" class="rounded-full w-10 h-10 shadow-md">
-        </div>
+   <div class="hidden md:flex md:flex-col md:items-center md:mb-6 md:pt-8 ">
+       <img src="https://preview.cruip.com/devspace/images/me.jpg" alt="Foto de perfil Escritorio" class="rounded-full w-10 h-10 shadow-md">
+       </div>
+   
+   <div class="flex flex-row justify-around md:flex-col md:justify-start md:space-y-8 md:p-4 md:pt-8">
+      <a 
+           routerLink="/home" 
+           class="p-3 text-gray-400 hover:text-blue-500 transition-colors"
+           routerLinkActive="active-link" 
+           [routerLinkActiveOptions]="{ exact: true }"
+         >
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+              <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+            </svg>                                       
+         </a>              
+      <a 
+         routerLink="/projects" 
+         class="p-3 text-gray-400 hover:text-blue-500 transition-colors"
+         routerLinkActive="active-link"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-json2-icon lucide-file-json-2"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg>
+         
+      </a>
+
+      <a 
+         routerLink="/about" 
+         class="p-3 text-gray-400 hover:text-blue-500 transition-colors"
+         routerLinkActive="active-link"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-user-icon lucide-book-user"><path d="M15 13a3 3 0 1 0-6 0"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><circle cx="12" cy="8" r="2"/></svg>
+         
+    </a>
     
-    <div class="flex flex-row justify-around md:flex-col md:justify-start md:space-y-8 md:p-4 md:pt-8">
-       <!-- Ícono activo (Home) -->
-       
-          <a routerLink="/home" class="p-3 text-gray-400 hover:text-blue-500 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-1a1 1 0 011-1h2a1 1 0 011 1v1a1 1 0 001 1m-6 0h6"/>
-          </svg>
-          </a>
-       
-       
-       <!-- Íconos inactivos -->
-       <a routerLink="/projects" class="p-3 text-gray-400 hover:text-blue-500 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path fill-opacity=".16" d="M1 4h18v10H1z"></path>
-            <path d="M8 3h4V2H8v1ZM6 3V0h8v3h6v12H0V3h6ZM2 5v8h16V5H2Zm14 13v-2h2v4H2v-4h2v2h12Z"></path>
-          </svg>
-       </a>
-
-       <a routerLink="/about" class="p-3 text-gray-400 hover:text-blue-500 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path fill-opacity=".16" fill-rule="nonzero" d="M1 5h16v14H1z"></path>
-            <path fill-rule="nonzero" d="M2 6v12h14V6H2Zm16-2v16H0V4h18ZM2 2V0h14v2H2Z"></path>
-        </svg>
-     </a>
-
-     <a href="proyectos.html" class="p-3 text-gray-400 hover:text-blue-500 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-     </a>
-
-     <a href="micv.html" class="p-3 text-gray-400 hover:text-blue-500 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-     </a>
-
-       <!-- Más íconos... -->
-    </div>
- </aside>
+      </div>
+</aside>

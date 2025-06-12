@@ -132,7 +132,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
       category: 'diario-tecnico',
       externalLink: 'notebook-sheet/diario-papercut-smtp',      
       content: `
-        <p>Hoy me encontré con una joya de herramienta para el desarrollo: PaperCut SMTP. Me ha sorprendido lo increíblemente fácil que es de usar. Básicamente, es un servidor SMTP falso que se ejecuta localmente y captura todos los correos que tu aplicación intenta enviar.</p>
+        <p>Hoy, desarrollando envio de emails en .net y teniendo que probar como estos eran recibidos y estructurado su mensaje, me encontré con una joya de herramienta para realizar estas pruebas: PaperCut SMTP. Me ha sorprendido lo increíblemente fácil que es de usar. Básicamente, es un servidor SMTP falso que se ejecuta localmente y captura todos los correos que tu aplicación intenta enviar.</p>
         <p class="mt-4">La gran ventaja es que puedes ver cómo se verían los correos (HTML, texto, encabezados, etc.) directamente en su interfaz, sin tener que configurar un servidor de correo real ni arriesgarte a enviar emails de prueba a destinatarios reales. Es ideal para etapas de desarrollo y testing, cuando necesitas verificar que la funcionalidad de envío de correos funciona correctamente sin el lío de gestionar credenciales o servicios de terceros.</p>
         
         <div class="mt-8 flex justify-center">

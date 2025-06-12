@@ -1,0 +1,45 @@
+/* En tu archivo CSS (por ejemplo, styles.css si es global) */
+
+.active-link {
+    /* Cambia el color del ícono a un azul ligeramente más claro si lo deseas, o mantenlo igual */
+    color: #3b82f6; /* Este es `text-blue-500` en Tailwind, puedes probar con `text-blue-400` si quieres el ícono más claro también */
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+  }
+  
+  .active-link::after {
+    content: '';
+    position: absolute;
+    right: 0; /* Posiciona la línea a la derecha */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centrar */
+    
+    /* --- CAMBIOS AQUÍ --- */
+    width: 2px; /* Más fina: de 4px a 2px */
+    height: 70%; /* Mantiene la altura, ajusta si es necesario */
+    background-color: #60a5fa; /* Azul más claro: `blue-400` en Tailwind (original era `blue-500`) */
+    /* --- FIN CAMBIOS --- */
+  
+    border-radius: 1px; /* Bordes ligeramente redondeados para la línea, ajustado a la nueva finura */
+  }
+  
+  /* Si tu menú es vertical (como en el modo md:flex-col), y quieres la línea a la derecha: */
+  @media (min-width: 768px) { /* md breakpoint de Tailwind */
+    .active-link::after {
+      right: 0;
+      left: auto; /* Asegura que no haya un left */
+      width: 2px; /* Línea vertical más fina */
+      height: 70%; /* Altura de la línea */
+    }
+  }
+  
+  /* Si tu menú es horizontal (como en el modo móvil), y quisieras una línea abajo: */
+  @media (max-width: 767px) { /* antes del md breakpoint de Tailwind */
+    .active-link::after {
+      bottom: 0;
+      top: auto; /* Asegura que no haya un top */
+      width: 70%; /* Ancho de la línea */
+      height: 2px; /* Línea horizontal más fina */
+      left: 50%;
+      transform: translateX(-50%); /* Centra horizontalmente */
+    }
+  }

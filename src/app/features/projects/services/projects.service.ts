@@ -3,7 +3,6 @@ import { Observable, of } from 'rxjs'; // 'of' para crear Observables a partir d
 import { delay, map } from 'rxjs/operators'; // 'delay' para simular latencia de red
 import { ProjectItem } from '../models/project-item.interface';
 
-// Definición de la interfaz ProjectItem (proporcionada por el usuario)
 
 
 @Injectable({
@@ -15,29 +14,55 @@ export class ProjectsService {
   // Esto simula una base de datos o una fuente de datos externa.
   private projectsData: ProjectItem[] = [
     {
-      id: 'boton-anti-panico',
-      date: 'MAY 20, 2024',
-      title: 'Botón anti pánico',
-      description: 'Aplicación mobile y backoffice web para la administración y seguimiento de alertas de víctimas de violencia de género',
-      imageUrl: './assets/proyectos/logobap.png',
-      externalLink: 'projects-view/boton-anti-panico', 
-      content: 'Este proyecto fue un desafío interesante para aprender sobre la integración de Angular con servicios de backend en tiempo real como Firebase. Se implementaron autenticación de usuarios, envío y recepción de mensajes, y persistencia de datos.',
-      tags: ['Angular', 'Firebase', 'Firestore', 'TypeScript', 'TailwindCSS'],
-      tecnologies: 'Angular .NET Ionic',
-      order: 1
+      'id': 'boton-anti-panico',
+      'date': 'FEB, 2021',
+      'title': 'Botón anti pánico',
+      'description': 'Desarrollo de una aplicación mobile y backoffice web para la administración de alertas de víctimas de violencia de género. Alojé el sistema en AWS, implementando un backend con Node.js y PHP.',
+      'imageUrl': './assets/proyectos/logobap.png',
+      'externalLink': 'projects-view/boton-anti-panico',
+      'content': 'Desarrollé una aplicación móvil destinada a víctimas de violencia de género, que les permite enviar alertas de pánico. Estas alertas son visualizadas en un mapa en tiempo real por operadores en un backoffice web que también diseñé, el cual cuenta con diversas funcionalidades para gestionar y realizar acciones sobre dichas alertas.\n\nPara el stack tecnológico, implementé un backoffice administrativo con Angular 17 que se comunica con una API robusta que construí en PHP. Manejé la persistencia de los datos con una base de datos MySQL y gestioné toda la comunicación en tiempo real para las alertas a través de un servidor dedicado en Node.js, utilizando Socket.io.\n\nPara el despliegue, configuré desde cero un servidor Ubuntu en AWS. Sobre este, instalé y configuré un servidor web Apache para servir la API de PHP, un servidor FTP para la transferencia de archivos, el entorno de Node.js para el servicio de sockets y herramientas de gestión como phpMyAdmin.',
+      'tags': ['Angular', 'Node.js', 'Socket.io', 'MySQL', 'PHP', 'Ionic', 'AWS'],
+      'tecnologies': 'Angular,  PHP, Ionic, Mysql',
+      'order': 1
     },
     {
-        id: 'tramites-online',
-        date: 'JUN 01, 2024',
-        title: 'Plataforma de Trámites Municipales Online',
-        description: 'Portal web integral para gestionar trámites municipales como tasas, habilitaciones, visado de planos, timbrado y más.',
-        imageUrl: './assets/proyectos/tramitesb.png',
-        externalLink: 'projects-view/tramites-online', 
-        content: 'Este proyecto consistió en el desarrollo completo de una plataforma para gestionar trámites municipales desde la web. Implementé funcionalidades como login y registro de usuarios, recuperación de credenciales, y múltiples flujos para la gestión de tasas (inmuebles, comercios, rodados), visado de planos, timbrados, habilitaciones comerciales, carga de CV en RRHH, y libre deuda. Se integraron medios de pago como tarjeta, homebanking, Mercado Pago y generación de comprobantes para Pago Fácil, Rapi Pago y Bapro Pagos. La aplicación brinda una experiencia centralizada para que los ciudadanos puedan gestionar trámites sin necesidad de asistir físicamente.',
-        tags: ['Angular', '.NET', 'Autenticación', 'Pagos online', 'UX/UI'],
-        tecnologies: 'PHP JQuery CSS Mysql',
-        order: 6
-      }
+      id: 'tramites-online',
+      date: 'JUN 01, 2024',
+      title: 'Plataforma de Trámites Municipales Online',
+      description: 'Portal web integral para gestionar trámites municipales como tasas, habilitaciones, visado de planos, timbrado y más.',
+      imageUrl: './assets/proyectos/tramitesb.png',
+      externalLink: 'projects-view/tramites-online', 
+      content: 'Este proyecto consistió en el desarrollo completo de una plataforma para gestionar trámites municipales desde la web. Implementé funcionalidades como login y registro de usuarios, recuperación de credenciales, y múltiples flujos para la gestión de tasas (inmuebles, comercios, rodados), visado de planos, timbrados, habilitaciones comerciales, carga de CV en RRHH,estacionamiento mediido y libre deuda. La aplicación brinda una experiencia centralizada para que los ciudadanos puedan gestionar trámites sin necesidad de asistir físicamente.',
+      tags: ['PHP', 'JQuery', 'Mysql'],
+      tecnologies: 'PHP JQuery Mysql',
+      order: 6
+    },
+    {
+      'id': 'turnos-sabato',
+      'date': 'MAR, 2010',
+      'title': 'Sistema de Turnos - Centro de Diagnóstico Sábato',
+      'description': 'Sistema para la administración de turnos del Centro de Diagnóstico Sábato, desarrollado íntegramente con PHP y jQuery.',
+      'imageUrl': './assets/experiencia/bera.png',
+      'externalLink': 'projects-view/turnos-sato rounded-lg sbato',
+      'content': 'Este fue uno de mis primeros proyectos full-stack, donde desarrollé un sistema completo para la gestión de turnos del Centro de Diagnóstico Sábato. La aplicación fue construida desde cero utilizando PHP para el backend y jQuery para la interactividad del frontend.\n\nEl sistema centraliza toda la operatoria del centro y para ello implementé las siguientes funcionalidades clave:\n\n- Gestión completa (CRUD) de Pacientes, Profesionales y Obras Sociales.\n- Administración de Turnos, permitiendo crear, modificar, cancelar y visualizar la agenda por profesional o por día.\n- Manejo de Usuarios con diferentes roles y permisos dentro del sistema.\n- Filtros de búsqueda avanzada en todas las secciones para facilitar la localización de información específica de forma rápida.\n- Generación e impresión de reportes y listados en formato PDF, como la agenda diaria de un profesional o listados de pacientes por obra social.\n- Desarrollé también un manual de usuario detallado para facilitar la capacitación del personal administrativo.<img  class="block mx-auto max-w-full h-auto shadow-md mt-8 mb-8"   src="./assets/proyectos/sabato1.png"> <img  class="block mx-auto max-w-full h-auto shadow-md mt-8 mb-8"   src="./assets/proyectos/sabato2.png">',
+      'tags': ['PHP', 'jQuery', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+      'tecnologies': 'PHP, jQuery, MySQL',
+      'order': 5
+    },
+    {
+      "id": "reintegros-galicia",
+      "date": "Marzo de 2022",
+      "title": "AGREGAR DESRIPCION DEL PREMIOReintegros Galicia - Plataforma de Reintegros en Tiempo Real",
+      "description": "Desarrollo de una plataforma de reintegros en tiempo real para Banco Galicia, integrando .NET Core, Kafka, NiFi y bases de datos SQL Server y MongoDB.",
+      'imageUrl': './assets/experiencia/galicia.png',
+      "externalLink": "projects-view/reintegros-galicia",
+      "content": "Desarrollo de una plataforma de reintegros en tiempo real para Banco Galicia, utilizando tecnologías como Microservicios con .NET Core, Kafka y NiFi. Implementando el patrón publicador-subscriptor con Kafka y configuración de flujos de datos en NiFi para la orquestación y transformación de información. Integración de bases de datos SQL Server y MongoDB para el almacenamiento eficiente de datos relevantes del proyecto.<img  class='block mx-auto max-w-full h-auto shadow-md mt-8 mb-8'   src='./assets/proyectos/galicia1.png'>",
+      "tags": ["Microservicios", ".NET Core", "Kafka", "Apache NiFi", "SQL Server", "MongoDB"],
+      "tecnologies": ".NET, Kafka,NiFi",
+      "order": 4
+    }
+
+
   ];
 
   constructor() { }

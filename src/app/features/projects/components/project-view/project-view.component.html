@@ -37,10 +37,8 @@
                           <p class="text-blue-600 text-sm mb-4">{{ project.date }}</p>
                           
                           <!-- Texto de la recomendación -->
-                          <p class="text-gray-700 leading-relaxed italic">
-                              {{ project.content }}
-                              
-                          </p>
+                          <div [innerHTML]="project.content" class="text-gray-700 leading-relaxed italic">                                                           
+                          </div>
 
                           <div *ngIf="project.tags && project.tags.length > 0" class="mb-8">                            
                             <div class="flex flex-wrap gap-2 mt-4">
