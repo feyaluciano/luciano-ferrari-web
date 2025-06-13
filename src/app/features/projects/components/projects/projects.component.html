@@ -16,14 +16,8 @@
       <h2 class="text-2xl font-bold mb-6">Últimos Proyectos</h2>
       
      
-
       <!-- Contenedor para la cuadrícula de proyectos -->
-      <div class="max-w-7xl mx-auto">
-        <!-- *ngIf="projects$ | async as projects":
-             - 'async' pipe se suscribe al Observable 'projects$' y desempaqueta el valor emitido.
-             - 'as projects' asigna el valor desempaquetado a una variable local llamada 'projects'.
-             - 'else loading' muestra la plantilla 'loading' mientras el Observable no emite un valor (ej. esperando datos).
-        -->
+      <div class="max-w-7xl mx-auto">        
         <div *ngIf="projects$ | async as projects; else loading">         
           <div *ngIf="projects.length > 0; else noProjects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">            
             <app-project-item *ngFor="let project of projects" [project]="project"></app-project-item>

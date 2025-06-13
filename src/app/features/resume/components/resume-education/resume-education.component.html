@@ -1,0 +1,20 @@
+<h2 class="text-2xl font-bold mb-6">Educación</h2>
+      <div class="w-full">
+        <div class="relative"> 
+          <div *ngIf="education$ | async as educationList">
+            <div *ngFor="let item of educationList; let last = last" 
+                 class="mb-8 relative last:mb-0 education-item"
+                 [ngClass]="{'no-line-after': last}">  
+              <div class="absolute left-0 top-0 z-10 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border border-gray-200 shadow-sm">
+                <img [src]="item.logoUrl" class="w-6 h-6 sm:w-8 sm:h-8 rounded-full object-contain" [alt]="item.university + ' logo'">
+              </div>
+              <div class="ml-12 sm:ml-16 pb-4"> 
+                <p class="text-sm text-gray-500 mb-1">{{ item.startDate }} · {{ item.endDate }}</p>
+                <h3 class="text-lg font-semibold text-gray-800">{{ item.degree }}</h3>
+                <p class="text-gray-600 mb-2">{{ item.university }}</p>
+                <p class="text-sm text-gray-700 leading-relaxed">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

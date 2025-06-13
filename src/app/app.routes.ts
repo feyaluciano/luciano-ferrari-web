@@ -4,7 +4,7 @@ import { ProjectsComponent } from './features/projects/components/projects/proje
 import { ProjectViewComponent } from './features/projects/components/project-view/project-view.component';
 import { AboutComponent } from './features/about/components/about/about.component';
 import { NotebookSheetComponent } from './features/home/components/notebook-sheet/notebook-sheet.component';
-
+import { ResumeComponent } from './features/resume/components/resume-list/resume.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
@@ -21,6 +21,6 @@ export const routes: Routes = [
       title: 'Luciano Ferrari - Cómo hice esta web'
     },
 
-    // { path: 'resume', component: ResumeComponent },
+     { path: 'resume', component: ResumeComponent },
     { path: '**', redirectTo: '/home' }
 ];
