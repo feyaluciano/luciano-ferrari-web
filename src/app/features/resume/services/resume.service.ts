@@ -14,35 +14,25 @@ export class ResumeService {
   // Esto simula una base de datos o una fuente de datos externa.
   private educationData: EducationItem[] = [
     {
-        id:'1',
-        logoUrl: './assets/proyectos/logobap.png', // Asegúrate de que esta ruta sea correcta
-        startDate: 'MAY 2017',
-        endDate: 'APR 2020',
-        degree: 'Master of Technology Science',
-        university: 'Purdue University',
-        description: 'Throughout my years at Purdue, I immersed myself in a dynamic learning environment, surrounded by dedicated faculty and talented peers.',
-        order:1
-      },
-      {
-        id:'2',
-        logoUrl: './assets/proyectos/logobap.png', // Asegúrate de que esta ruta sea correcta
-        startDate: 'ENERO 2020',
-        endDate: 'APR 2020',
-        degree: 'Master of Technology Science',
-        university: 'Purdue University',
-        description: 'Throughout my years at Purdue, I immersed myself in a dynamic learning environment, surrounded by dedicated faculty and talented peers.',
-        order:2
-      },
-      {
-        id:'3',
-        logoUrl: './assets/proyectos/logobap.png', // Asegúrate de que esta ruta sea correcta
-        startDate: 'MAY 2017',
-        endDate: 'APR 2020',
-        degree: 'unlp',
-        university: 'Purdue University',
-        description: 'Throughout my years at Purdue, I immersed myself in a dynamic learning environment, surrounded by dedicated faculty and talented peers.',
-        order:2
-      }
+      id: '1',
+      logoUrl: './assets/resume/unlp.png', // Podés cambiar esta ruta al logo real de la UNLP
+      startDate: 'MAR 1995',
+      endDate: 'DIC 2000',
+      degree: 'Licenciatura en Sistemas',
+      university: 'Universidad Nacional de La Plata',
+      description: 'Carrera orientada al análisis, diseño y desarrollo de sistemas informáticos, con fuerte base en matemática, programación y teoría de la computación.',
+      order: 1
+    },
+    {
+      id: '2',
+      logoUrl: './assets/resume/ensa.jpg', // Podés cambiar esta ruta al logo real de la escuela
+      startDate: 'MAR 1995',
+      endDate: 'DIC 2000',
+      degree: 'Bachiller con orientación en Exactas y Naturales',
+      university: 'Escuela de Enseñanza Media N° 1',
+      description: 'Formación secundaria con enfoque en ciencias exactas, matemática, física y biología.',
+      order: 2
+    }
 
 
   ];
