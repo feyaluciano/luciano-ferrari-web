@@ -152,12 +152,12 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
       category: 'diario-tecnico',
       externalLink: 'notebook-sheet/diario-refactor-srp-service',
       content: `
-        <p>En el desarrollo de software, a menudo nos encontramos con clases o servicios que, con el tiempo, empiezan a acumular más responsabilidades de las que deberían. Esto me pasó recientemente con un <code>DocumentoService</code>, que además de gestionar todo el ciclo de vida de un documento (creación, revisión, aprobación), también se encargaba de construir y enviar notificaciones por correo electrónico en cada paso.</p>
-        <p class="mt-4">Cada método que cambiaba el estado del documento terminaba con un bloque de código casi idéntico para enviar un email. Era un "code smell" evidente: el servicio tenía más de una razón para cambiar y el código se estaba volviendo repetitivo y difícil de leer.</p>
+        <p>En el desarrollo de software, a menudo nos encontramos con clases o servicios que, con el tiempo, empiezan a acumular más responsabilidades de las que deberían. Esto me pasó recientemente con un <code>ExpedienteService</code>, que además de gestionar todo el ciclo de vida de un expediente (creación, revisión, aprobación), también se encargaba de construir y enviar notificaciones por correo electrónico en cada paso.</p>
+        <p class="mt-4">Cada método que cambiaba el estado del expediente terminaba con un bloque de código casi idéntico para enviar un email. Era un "code smell" evidente: el servicio tenía más de una razón para cambiar y el código se estaba volviendo repetitivo y difícil de leer.</p>
         
         <h3 class="text-xl font-semibold mt-6 mb-4">El Problema: Un Servicio con Demasiadas Responsabilidades</h3>
         
-        <p>El principal problema era la violación del Principio de Responsabilidad Única (SRP). Mi <code>DocumentoService</code> sabía demasiado. Sabía sobre la lógica de negocio y también sobre los detalles de las notificaciones (asuntos, cuerpos de email, destinatarios, etc.).</p>
+        <p>El principal problema era la violación del Principio de Responsabilidad Única (SRP). Mi <code>ExpedienteService</code> sabía demasiado. Sabía sobre la lógica de negocio y también sobre los detalles de las notificaciones (asuntos, cuerpos de email, destinatarios, etc.).</p>
         <p class="mt-4">Un método típico se veía así, mezclando la lógica de negocio con la lógica de notificación:</p>
         
     <img 
@@ -167,9 +167,9 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     
         <h3 class="text-xl font-semibold mt-6 mb-4">La Solución: Delegar la Responsabilidad a un Nuevo Servicio</h3>
         
-        <p>La solución fue crear un nuevo servicio especializado, <code>GestionDocumentalNotificacionService</code>, cuya única responsabilidad es gestionar el envío de notificaciones relacionadas con los documentos. El <code>DocumentoService</code> ya no necesita saber cómo se envía un email, simplemente delega esa tarea.</p>
+        <p>La solución fue crear un nuevo servicio especializado, <code>GestionDocumentalNotificacionService</code>, cuya única responsabilidad es gestionar el envío de notificaciones relacionadas con los expedientes. El <code>ExpedienteService</code> ya no necesita saber cómo se envía un email, simplemente delega esa tarea.</p>
         
-        <p class="mt-4">Ahora, el método en <code>DocumentoService</code> es mucho más limpio y enfocado:</p>
+        <p class="mt-4">Ahora, el método en <code>ExpedienteService</code> es mucho más limpio y enfocado:</p>
    <img 
             class="w-4/5 h-auto rounded-lg shadow-md" 
             src="./assets/diario-tecnico/diario-refactor-srp-service/diario-refactor-srp-service2.png" 
@@ -178,8 +178,8 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
         <h3 class="text-xl font-semibold mt-6 mb-4">Resumen: ¿Qué Ganamos con este Refactor?</h3>
         <p>Esta refactorización es un ejemplo claro de cómo aplicar principios de diseño de software para mejorar la calidad de nuestro código.</p>
         <ul class="list-disc list-inside space-y-2 mt-4">
-            <li><strong>Principio de Responsabilidad Única (SOLID)</strong>: Es el concepto central aquí. Ahora cada servicio tiene una sola razón para cambiar. <code>DocumentoService</code> cambia si la lógica de negocio del documento cambia. <code>GestionDocumentalNotificacionService</code> cambia si la lógica de las notificaciones cambia.</li>
-            <li><strong>Clean Code</strong>: El código es ahora más legible y expresivo. Los métodos en <code>DocumentoService</code> describen claramente su propósito sin el "ruido" de la lógica de notificación.</li>
+            <li><strong>Principio de Responsabilidad Única (SOLID)</strong>: Es el concepto central aquí. Ahora cada servicio tiene una sola razón para cambiar. <code>ExpedienteService</code> cambia si la lógica de negocio del espediente cambia. <code>GestionDocumentalNotificacionService</code> cambia si la lógica de las notificaciones cambia.</li>
+            <li><strong>Clean Code</strong>: El código es ahora más legible y expresivo. Los métodos en <code>ExpedienteService</code> describen claramente su propósito sin el "ruido" de la lógica de notificación.</li>
             <li><strong>DRY (Don't Repeat Yourself)</strong>: Hemos eliminado la duplicación de código. La lógica para construir cada tipo de notificación está definida en un único lugar.</li>
             <li><strong>Patrón de Diseño (Delegación/Facade)</strong>: Estamos delegando una responsabilidad a otro objeto. El servicio de notificaciones actúa como una "Fachada" (Facade) que simplifica la interacción con el sistema de envío de emails.</li>
         </ul>
