@@ -52,14 +52,62 @@ export class ProjectsService {
     {
       "id": "reintegros-galicia",
       "date": "Marzo de 2022",
-      "title": "AGREGAR DESRIPCION DEL PREMIOReintegros Galicia - Plataforma de Reintegros en Tiempo Real",
+      "title": "Reintegros Galicia - Plataforma de Reintegros en Tiempo Real",
       "description": "Desarrollo de una plataforma de reintegros en tiempo real para Banco Galicia, integrando .NET Core, Kafka, NiFi y bases de datos SQL Server y MongoDB.",
-      'imageUrl': './assets/experiencia/galicia.png',
+      "imageUrl": "./assets/experiencia/galicia.png",
       "externalLink": "projects-view/reintegros-galicia",
-      "content": "Desarrollo de una plataforma de reintegros en tiempo real para Banco Galicia, utilizando tecnologías como Microservicios con .NET Core, Kafka y NiFi. Implementando el patrón publicador-subscriptor con Kafka y configuración de flujos de datos en NiFi para la orquestación y transformación de información. Integración de bases de datos SQL Server y MongoDB para el almacenamiento eficiente de datos relevantes del proyecto.<img  class='block mx-auto max-w-full h-auto shadow-md mt-8 mb-8'   src='./assets/proyectos/galicia1.png'>",
+      "content": "Desarrollo de una plataforma de reintegros en tiempo real para Banco Galicia, utilizando tecnologías como Microservicios con .NET Core, Kafka y NiFi. Implementando el patrón publicador-subscriptor con Kafka y configuración de flujos de datos en NiFi para la orquestación y transformación de información. Integración de bases de datos SQL Server y MongoDB para el almacenamiento eficiente de datos relevantes del proyecto.\n\n**¡Premio al Equipo!** El equipo detrás de esta plataforma recibió el **Primer Premio PLATINO 🥇 en la Categoría Experiencia del Cliente (CX) e Innovación en los Premios País a los Innovadores Financieros en las Américas 2024 de Fintech Americas**, un reconocimiento a la excelencia e impacto de la solución desarrollada.\n\n<img class='block mx-auto max-w-full h-auto shadow-md mt-8 mb-8' src='./assets/proyectos/galicia1.png'>",
       "tags": ["Microservicios", ".NET Core", "Kafka", "Apache NiFi", "SQL Server", "MongoDB"],
       "tecnologies": ".NET, Kafka,NiFi",
       "order": 4
+    },
+    {
+      'id': 'ypf-incidentes-medioambientales', 
+      'date': 'JUL, 2023',
+      'title': 'Sistema de Gestión de Incidentes Medioambientales - YPF', 
+      'description': 'Desarrollo y arquitectura de backoffice en Angular para el seguimiento de incidentes medioambientales en yacimientos de YPF.', // Descripción actualizada
+      'imageUrl': './assets/proyectos/ypf.png',
+      'externalLink': 'projects-view/ypf-incidentes-medioambientales',
+      'content': 'Fui el encargado principal del desarrollo del backoffice para un sistema crítico en la gestión de **incidentes medioambientales** dentro de los yacimientos de YPF, la empresa de combustibles más importante de Argentina. Mi rol abarcó desde la concepción de la arquitectura del backoffice hasta la implementación de su estructura de directorios y la navegación del menú, asegurando una base sólida y escalable para futuras expansiones.\n\nEste sistema permite registrar y realizar un seguimiento exhaustivo de diferentes tipos de **incidentes medioambientales**, facilitando la gestión y el análisis de incidentes en todos los sitios operativos de la compañía. La implementación de una arquitectura robusta y el uso de patrones de diseño avanzados fueron cruciales para garantizar la mantenibilidad y eficiencia del sistema.<img  class="block mx-auto max-w-full h-auto shadow-md mt-8 mb-8"   src="./assets/proyectos/ypf-cetap.png">', 
+      'tags': ['Angular', '.NET', 'API REST', 'SQL Server', 'TypeScript','Patrones de Diseño', 'API REST', 'Arquitectura en Capas'],
+      'tecnologies': 'Angular, .NET',
+      'order': 2
+    },
+    {
+      "id": "inscripciones-municipales",
+      "date": "20116",
+      "title": "Sistemas de Inscripciones Municipales",
+      "description": "Desarrollo de múltiples sistemas de inscripción para diversas áreas municipales, facilitando el acceso de los vecinos a deportes, talleres y otras actividades.",
+      "imageUrl": "./assets/experiencia/bera.png", 
+      "externalLink": "projects-view/inscripciones-municipales",
+      "content": "Durante este período, lideré el desarrollo de varios sistemas de inscripción destinados a diferentes áreas del municipio. Estos sistemas permitieron a los vecinos inscribirse fácilmente en una amplia gama de actividades, incluyendo deportes, talleres y otros eventos municipales.\n\nCada sistema incluía un backoffice completo para la administración eficiente de las inscripciones, con funcionalidades como:\n\n- Gestión de inscripciones (creación, modificación, cancelación).\n- Generación de informes en formatos Excel y PDF.\n- Envío de notificaciones a los usuarios.\n- Diversas funcionalidades adicionales para una gestión integral.",
+      "tags": [".NET", "AngularJS", "SQL Server", "C#", "HTML", "CSS"],
+      "tecnologies": ".NET, AngularJS, SQL Server",
+      "order": 3 // Ajusta el orden según corresponda
+    },
+    {
+      "id": "cementerio-berazategui",
+      "date": "2018", 
+      "title": "Sistema de Gestión - Cementerio Municipal de Berazategui",
+      "description": "Desarrollo integral de un sistema para la administración completa de los servicios del cementerio municipal, incluyendo nichos, bóvedas y arrendatarios.",
+      "imageUrl": "./assets/experiencia/bera.png",
+      "externalLink": "projects-view/cementerio-berazategui", // Placeholder - Ajusta si tienes un enlace específico
+      "content": "Desarrollé un sistema robusto para la administración integral del Cementerio Municipal de Berazategui. Esta plataforma centraliza y gestiona todos los aspectos operativos, permitiendo una administración eficiente de:\n\n- Servicios de **nichos**, **tierra**, **bóvedas** y **panteones**.\n- Información de **arrendatarios** y gestión de sus contratos.\n- **Generación e impresión de recibos** y otros documentos administrativos.\n- Funcionalidades avanzadas para la búsqueda, filtrado y reporte de datos, mejorando la gestión y el acceso a la información crítica del cementerio.",
+      "tags": [".NET", "AngularJS", "SQL Server", "C#", "HTML", "CSS"], // Mismos tags que "Inscripciones Municipales"
+      "tecnologies": ".NET, AngularJS, SQL Server", // Mismas tecnologías que "Inscripciones Municipales"
+      "order": 5 // Ajusta el orden según tu preferencia
+    },
+    {
+      "id": "cetapp-go",
+      "date": "MAY 2023 - ACTUALIDAD",
+      "title": "CetApp GO - Solución Web y Móvil de Gestión HSE",
+      "description": "Desarrollo de nuevas funcionalidades para CetApp GO, una herramienta móvil líder en la digitalización y optimización de la gestión HSE en terreno.",
+      "imageUrl": "./assets/experiencia/cetap.png", 
+      "externalLink": "projects-view/cetapp-go", 
+      "content": "Actualmente, contribuyo al desarrollo continuo de **CetApp GO**, el producto principal de CeTAP SA, una consultora argentina especializada en Gestión de HSE (Salud, Seguridad y Medio Ambiente). CetApp GO es una solución móvil y escalable, disponible para **Android e iOS**, diseñada para digitalizar y optimizar la gestión de seguridad y ambiente directamente en terreno.\n\nMi rol principal implica el desarrollo de **nuevas funcionalidades** críticas, trabajando tanto en el **frontend con Vue 3** como en el **backend con .NET**. Durante este proceso, aplico rigurosamente **buenas prácticas de desarrollo**, **patrones de diseño**, principios de **clean code** y una **arquitectura en capas** robusta, asegurando la calidad, escalabilidad y mantenibilidad del software.<img  class='block mx-auto max-w-full h-auto shadow-md mt-8 mb-8'   src='./assets/proyectos/cetap-go.png'>",
+      "tags": [".NET", "Vue3", "SQL Server", "Azure", "Mobile Development", "HSE"],
+      "tecnologies": ".NET, Vue3, SQL Server, Azure",
+      "order": 0 
     }
 
 
