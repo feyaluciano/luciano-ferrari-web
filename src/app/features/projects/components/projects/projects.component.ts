@@ -9,15 +9,9 @@ import { ProjectItemComponent } from '../project-item/project-item.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [
-    HomeHeaderComponent,
-    SubscriptionPanelComponent,
-    ProjectItemComponent,
-    AsyncPipe,
-    CommonModule
-  ],
+  imports: [HomeHeaderComponent, SubscriptionPanelComponent, ProjectItemComponent, AsyncPipe, CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
   /**
@@ -31,7 +25,7 @@ export class ProjectsComponent {
    * Constructor del componente.
    * Aquí inyectamos el ProjectsService, que nos permitirá acceder a los datos de los proyectos.
    */
-  constructor(private projectsService: ProjectsService) { }
+  constructor(private projectsService: ProjectsService) {}
 
   /**
    * ngOnInit: Lifecycle hook que se ejecuta una vez que el componente ha sido inicializado.
@@ -42,5 +36,4 @@ export class ProjectsComponent {
     // para obtener el Observable de proyectos.
     this.projects$ = this.projectsService.getProjects();
   }
-
 }

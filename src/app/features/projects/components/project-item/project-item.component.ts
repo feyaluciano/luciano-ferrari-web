@@ -7,8 +7,7 @@ import { ProjectItem } from '../../models/project-item.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './project-item.component.html',
-  
 })
 export class ProjectItemComponent {
   @Input() project!: ProjectItem;
-} 
+}

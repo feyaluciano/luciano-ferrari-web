@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ExperienceItem } from '../../models/experience-item.interface';
 
@@ -7,30 +7,15 @@ import { SubscriptionPanelComponent } from '../../../../shared/components/subscr
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { ResumeService } from '../../services/resume.service';
 
-
-
-
 @Component({
   selector: 'app-resume-experience',
-  imports: [
-    HomeHeaderComponent,
-    SubscriptionPanelComponent,    
-    AsyncPipe,
-    CommonModule
-  ],
+  imports: [HomeHeaderComponent, SubscriptionPanelComponent, AsyncPipe, CommonModule],
   templateUrl: './resume-experience.component.html',
-  styleUrl: './resume-experience.component.css'
+  styleUrl: './resume-experience.component.css',
 })
-export class ResumeExperienceComponent {
- 
+export class ResumeExperienceComponent implements OnInit {
   experience$!: Observable<ExperienceItem[]>;
-
-  /**
-   * Constructor del componente.
-   * Aquí inyectamos el ProjectsService, que nos permitirá acceder a los datos de los proyectos.
-   */
-  constructor(private resumeService: ResumeService) { }
-
+  private resumeService = inject(ResumeService);  
   /**
    * ngOnInit: Lifecycle hook que se ejecuta una vez que el componente ha sido inicializado.
    * Es el lugar ideal para cargar datos iniciales.
@@ -40,5 +25,4 @@ export class ResumeExperienceComponent {
     // para obtener el Observable de proyectos.
     this.experience$ = this.resumeService.getExperience();
   }
-
 }

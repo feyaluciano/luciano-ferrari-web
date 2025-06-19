@@ -6,8 +6,6 @@ import { RouterModule, RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterModule, RouterLink],
   templateUrl: './subscription-panel.component.html',
-  styleUrl: './subscription-panel.component.css'
+  styleUrl: './subscription-panel.component.css',
 })
-export class SubscriptionPanelComponent {
-
-}
+export class SubscriptionPanelComponent {}

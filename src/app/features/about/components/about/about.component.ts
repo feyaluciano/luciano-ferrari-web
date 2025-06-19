@@ -3,11 +3,10 @@ import { HomeHeaderComponent } from '../../../home/components/home-header/home-h
 import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
 @Component({
   selector: 'app-about',
-  imports: [HomeHeaderComponent,SubscriptionPanelComponent],
+  imports: [HomeHeaderComponent, SubscriptionPanelComponent],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
 })
-export class AboutComponent {  
-  ngOnInit() {    
-  }
+export class AboutComponent   {
+ 
 }

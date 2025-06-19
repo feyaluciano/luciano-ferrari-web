@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit,inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EducationItem } from '../../models/education-item.interface';
 
@@ -7,29 +7,20 @@ import { SubscriptionPanelComponent } from '../../../../shared/components/subscr
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { ResumeService } from '../../services/resume.service';
 
-
-
-
 @Component({
   selector: 'app-resume-education',
-  imports: [
-    HomeHeaderComponent,
-    SubscriptionPanelComponent,    
-    AsyncPipe,
-    CommonModule
-  ],
+  imports: [HomeHeaderComponent, SubscriptionPanelComponent, AsyncPipe, CommonModule],
   templateUrl: './resume-education.component.html',
-  styleUrl: './resume-education.component.css'
+  styleUrl: './resume-education.component.css',
 })
-export class ResumeEducationComponent {
- 
+export class ResumeEducationComponent implements OnInit {
   education$!: Observable<EducationItem[]>;
 
   /**
    * Constructor del componente.
    * Aquí inyectamos el ProjectsService, que nos permitirá acceder a los datos de los proyectos.
    */
-  constructor(private resumeService: ResumeService) { }
+  private resumeService = inject(ResumeService)
 
   /**
    * ngOnInit: Lifecycle hook que se ejecuta una vez que el componente ha sido inicializado.
@@ -40,5 +31,4 @@ export class ResumeEducationComponent {
     // para obtener el Observable de proyectos.
     this.education$ = this.resumeService.getEducation();
   }
-
 }

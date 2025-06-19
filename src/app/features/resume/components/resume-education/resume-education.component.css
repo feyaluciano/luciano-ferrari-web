@@ -1,32 +1,32 @@
 /* En tu archivo CSS global (styles.css) o en el CSS de tu componente */
 
 .education-item {
-    position: relative;
-  }
-  
+  position: relative;
+}
+
+.education-item::after {
+  content: '';
+  position: absolute;
+  width: 2px; /* Grosor de la línea */
+  background-color: #e5e7eb; /* Color gris claro */
+  z-index: 0; /* Detrás de los círculos */
+
+  /* Valores para pantallas pequeñas (móvil) */
+  left: 15px; /* (Círculo w-8, left-0 -> centro en 16px). Línea de 2px, entonces 16-1 = 15px */
+  top: 32px; /* Inicia la línea justo al final del círculo w-8 (32px de alto) */
+  bottom: -40px; /* *** AUMENTADO EL VALOR NEGATIVO DE BOTTOM *** */
+}
+
+/* Ajustes para pantallas medianas y grandes (sm en adelante) */
+@media (min-width: 640px) {
   .education-item::after {
-    content: '';
-    position: absolute;
-    width: 2px; /* Grosor de la línea */
-    background-color: #e5e7eb; /* Color gris claro */
-    z-index: 0; /* Detrás de los círculos */
-    
-    /* Valores para pantallas pequeñas (móvil) */
-    left: 15px; /* (Círculo w-8, left-0 -> centro en 16px). Línea de 2px, entonces 16-1 = 15px */
-    top: 32px; /* Inicia la línea justo al final del círculo w-8 (32px de alto) */
+    left: 23px; /* (Círculo w-12, left-0 -> centro en 24px). Línea de 2px, entonces 24-1 = 23px */
+    top: 48px; /* Inicia la línea justo al final del círculo w-12 (48px de alto) */
     bottom: -40px; /* *** AUMENTADO EL VALOR NEGATIVO DE BOTTOM *** */
   }
-  
-  /* Ajustes para pantallas medianas y grandes (sm en adelante) */
-  @media (min-width: 640px) {
-    .education-item::after {
-      left: 23px; /* (Círculo w-12, left-0 -> centro en 24px). Línea de 2px, entonces 24-1 = 23px */
-      top: 48px; /* Inicia la línea justo al final del círculo w-12 (48px de alto) */
-      bottom: -40px; /* *** AUMENTADO EL VALOR NEGATIVO DE BOTTOM *** */
-    }
-  }
-  
-  /* Clase para ocultar la línea del último elemento (sin cambios) */
-  .education-item.no-line-after::after {
-    display: none;
-  }
+}
+
+/* Clase para ocultar la línea del último elemento (sin cambios) */
+.education-item.no-line-after::after {
+  display: none;
+}

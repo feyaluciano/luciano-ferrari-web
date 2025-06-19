@@ -1,129 +1,233 @@
 <!-- src/app/features/about-this-site/about-this-site.component.html -->
 <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-      La Historia Detrás de Esta Web
-    </h1>
-    <p class="text-gray-600 text-lg mb-8">
-      Aquí te contaré cómo construí este sitio web personal y portafolio profesional, desde la idea inicial hasta el despliegue final.
-    </p>
-  
-    <div class="prose max-w-none text-gray-700 leading-relaxed">
-        <h2 class="text-3xl font-semibold mb-4">El Por Qué</h2>
-        <p>
-          La idea de desarrollar esta web nació de una doble curiosidad y una necesidad práctica. Por un lado, me impulsó un profundo deseo de **explorar los límites de la colaboración con la Inteligencia Artificial** en el desarrollo de software. Quería poner a prueba la capacidad de la IA para construir una aplicación web moderna, utilizando algunas de las últimas tecnologías del mercado como Angular 19 y Tailwind CSS, **escribiendo el menor código posible de mi parte**. Mi enfoque fue guiar a la IA a través de prompts detallados, pasarle imágenes de un template estático y solicitarle que realizara la maquetación en HTML y Tailwind. Para esta experimentación, evalué y comparé el rendimiento de diferentes modelos de IA, incluyendo **OpenAI, Gemini y DeepSeek**, analizando cuál resolvía mejor las tareas de desarrollo planteadas.
-        </p>
-        <p>
-          Por otro lado, esta web sirve como una **ventana profesional hacia reclutadores y colegas**. Es un espacio donde no solo muestro mis proyectos, sino que también evidencio mi actividad y conocimiento en ciertas tecnologías, la aplicación de patrones de diseño, mi compromiso con el código limpio y mi interés en la mejora continua.
-        </p>
-        <p>
-          Finalmente, esta plataforma se concibió como un **ejercicio de aprendizaje continuo y una bitácora personal**. Mi objetivo es tener un lugar centralizado donde pueda documentar y organizar los conocimientos, enlaces y recursos importantes que voy adquiriendo en mi día a día laboral, transformando mis aprendizajes en recursos valiosos para mí y, potencialmente, para la comunidad.
-        </p>
-  
-        <h2 class="text-3xl font-semibold mt-8 mb-4">El Cómo: Tecnologías y Proceso</h2>
-        <h3 class="text-2xl font-medium mb-3">La Colaboración con la IA: Un Diálogo Inicial</h3>
-        <p>
-          El punto de partida de este proyecto fue un ejercicio de "prompt engineering". Mi primer paso fue enviar un prompt inicial que, honestamente, no estaba del todo bien redactado, solicitando a la IA que lo puliera y lo hiciera más claro y preciso. La IA demostró una gran capacidad para entender mi intención y refinar mi solicitud.
-        </p>
-        <p>
-          Este fue el prompt final, ya mejorado por la IA, que sirvió como hoja de ruta para todo el desarrollo:
-        </p>
-        <blockquote class="bg-gray-100 border-l-4 border-blue-500 text-gray-700 p-4 pl-6 italic mb-6 rounded-r-lg">
-          <p>"Hola, estoy listo para comenzar a desarrollar mi sitio web personal y portafolio profesional. Mi objetivo es crear una aplicación moderna con Angular (última versión) y Tailwind CSS. Este sitio web incluirá las siguientes secciones principales:</p>
-          <ul>
-            <li>Currículum Vitae (CV): Presentación de mi experiencia profesional, habilidades y educación.</li>
-            <li>Proyectos: Una galería o listado detallado de los proyectos de desarrollo de software en los que he trabajado, con descripciones, tecnologías utilizadas y enlaces (si aplica).</li>
-            <li>Bitácora/Recursos: Una sección para compartir enlaces interesantes, artículos, o pequeñas notas sobre desarrollo de software y tecnologías que encuentro útiles.</li>
-          </ul>
-          <p>Ya cuento con una plantilla HTML/CSS estática que he desarrollado previamente y que servirá como base visual para el diseño del sitio.
-          Mis objetivos clave para este proyecto son:</p>
-          <ul>
-            <li>Desarrollo y Despliegue: Crear la aplicación Angular, integrar la plantilla existente, y finalmente desplegarla en Vercel a partir de un repositorio en GitHub.</li>
-            <li>Aprendizaje Profundo de Angular y Buenas Prácticas: A medida que construimos el sitio, quiero que me guíes y me enseñes:Estructura del Proyecto: Explícame la lógica detrás de la estructura de directorios que propongas, por qué es escalable y mantenible.</li>
-            <li>Conceptos Modernos de Angular: Detalla el uso, importancia y ventajas de características como componentes standalone, signals, servicios, enrutamiento avanzado, lazy loading, manejo de formularios reactivos, e inyección de dependencias.</li>
-            <li>Patrones de Diseño: Identifica y explícame los patrones de diseño (ej. estructurales, creacionales, de comportamiento) que vayamos implementando, tanto a nivel de componente como de aplicación.</li>
-            <li>Integración con Tailwind CSS: Muéstrame las mejores prácticas para configurar y utilizar Tailwind CSS dentro de un proyecto Angular, incluyendo la personalización y optimización (PurgeCSS).</li>
-            <li>Calidad de Código y Pruebas: Si es posible, introduce conceptos básicos de testing en Angular.</li>
-            <li>Optimización para el Despliegue: Consejos para optimizar el build final para Vercel.</li>
-          </ul>
-          <p>Para empezar, por favor, ayúdame con los siguientes pasos iniciales:</p>
-          <ul>
-            <li>¿Cómo creamos un nuevo proyecto Angular (última versión) configurado desde cero para usar componentes standalone por defecto?</li>
-            <li>¿Cuál sería la estructura de directorios inicial recomendada para un proyecto de este tipo, pensando en las secciones que te mencioné (CV, Proyectos, Bitácora) y la escalabilidad?</li>
-            <li>¿Cómo integramos Tailwind CSS de manera efectiva en este nuevo proyecto Angular?</li>
-            <li>Una vez configurado el proyecto base y Tailwind, ¿cuál sería el primer paso para empezar a migrar/integrar mi plantilla HTML/CSS existente? Podríamos empezar por el layout principal (cabecera, pie de página, contenedor principal).</li>
-          </ul>
-          <p>Ya instalé Angular y creé el proyecto llamado luciano-ferrari-web"</p>
-        </blockquote>
-    
-        <p>
-          A partir de este prompt detallado, la IA pudo guiarme a través de los pasos iniciales, incluyendo la creación del proyecto Angular con componentes standalone y la integración de Tailwind CSS.
-        </p>
-    
-        <h3 class="text-2xl font-medium mt-6 mb-3">Estructura del Proyecto: Modularidad y Escalabilidad</h3>
-        <p>
-          Un pedido clave a la IA fue su recomendación sobre la estructura de directorios. Me proporcionó una organización lógica con carpetas como <code>core</code> (para servicios esenciales), <code>shared</code> (para componentes reutilizables como la navegación o tarjetas) y <code>features</code> (para encapsular las secciones principales como CV, Proyectos y Bitácora). Esta estructura fue elegida y explicada por la IA por su contribución a la modularidad, la facilidad de mantenimiento y la escalabilidad, facilitando el lazy loading de módulos y el trabajo en equipo.
-        </p>
-    
-        <h3 class="text-2xl font-medium mt-6 mb-3">Maquetación de Componentes con HTML y Tailwind</h3>
-        <p>
-          Un ejemplo claro de la colaboración fue la maquetación de componentes. Le proporcioné a la IA capturas de pantalla de mi plantilla estática, como la siguiente, y le pedí que desarrollara el componente correspondiente en HTML y Tailwind CSS, incluyendo los comandos para su creación:
-        </p>
-        <div class="my-6 text-center">
-            <img src="./assets/example-component.png" alt="Example component" 
-            class="w-full max-w-2xl h-auto mx-auto border rounded-lg shadow-md">
-        </div>
-        <p>
-          La IA generó el código HTML con las clases de Tailwind necesarias y los comandos CLI de Angular para generar los componentes standalone, como el <code>ProjectCardComponent</code>. Este enfoque me permitió enfocarme en la lógica de la aplicación mientras la IA manejaba gran parte del trabajo de maquetación y estilado.
-        </p>
-    
-        <h3 class="text-2xl font-medium mt-6 mb-3">Tecnologías Clave del Proyecto</h3>
-        <p>
-          Además de la IA como co-piloto, este proyecto se construyó sobre pilares tecnológicos sólidos:
-        </p>
-        <ul>
-          <li>**Angular 19 (Pre-lanzamiento) y TypeScript**: Elegí la última versión de Angular para explorar sus nuevas funcionalidades y la API de componentes standalone, lo que me permitió escribir código más modular y optimizado. TypeScript garantiza la robustez y la legibilidad del código.</li>
-          <li>**Tailwind CSS**: Para el estilado, opté por Tailwind CSS. Su enfoque de "utility-first" me permitió construir interfaces responsivas de manera extremadamente rápida y mantener una coherencia visual sin escribir CSS personalizado extenso.</li>
-          <li>**Vercel y GitHub**: El despliegue se gestiona a través de Vercel, conectado directamente a un repositorio en GitHub. Esto facilita un flujo de trabajo de integración y despliegue continuo (CI/CD), donde cada push al repositorio dispara un nuevo despliegue en producción.</li>
-        </ul>
-    
-        <h3 class="text-2xl font-medium mt-6 mb-3">Patrones de Diseño y Código Limpio</h3>
-        <p>
-          A lo largo del desarrollo, apliqué activamente varios patrones de diseño y principios de código limpio. Por ejemplo, utilicé la **Inyección de Dependencias** de Angular para gestionar los servicios (como <code>ProjectsService</code> y <code>NotebookSheetService</code>), lo que facilita la prueba y el mantenimiento del código. La estructura de carpetas <code>core</code>, <code>shared</code> y <code>features</code> es un reflejo del principio de **Separación de Intereses** y modularidad.
-        </p>
-      <!-- Aquí puedes insertar la imagen del diagrama de flujo una vez que la tengas lista -->
-      <div class="my-8 text-center">
-        <img src="assets/acerca-del-sitio.webp" alt="Diagrama de Flujo de Creación de la Web con IA" 
-             class="w-full max-w-2xl h-auto mx-auto border rounded-lg shadow-md">
-        <p class="text-sm text-gray-500 mt-2">Diagrama del proceso de desarrollo colaborativo con IA.</p>
-      </div>
-  
-     
-      <h2 class="text-3xl font-semibold mt-8 mb-4">Aprendizajes y Reflexiones</h2>
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">La Historia Detrás de Esta Web</h1>
+  <p class="text-gray-600 text-lg mb-8">
+    Aquí te contaré cómo construí este sitio web personal y portafolio profesional, desde la idea inicial hasta el
+    despliegue final.
+  </p>
+
+  <div class="prose max-w-none text-gray-700 leading-relaxed">
+    <h2 class="text-3xl font-semibold mb-4">El Por Qué</h2>
     <p>
-      La experiencia de desarrollar esta web me ha dejado valiosos aprendizajes sobre la colaboración con la Inteligencia Artificial. La IA ha demostrado ser una herramienta de apoyo inmensamente útil, capaz de acelerar el proceso de desarrollo de manera significativa. Sin embargo, un hallazgo interesante fue cómo **algunos modelos de IA resolvieron mejor ciertas tareas que otros**, evidenciando las fortalezas y debilidades particulares de cada uno en diferentes contextos.
+      La idea de desarrollar esta web nació de una doble curiosidad y una necesidad práctica. Por un lado, me impulsó un
+      profundo deseo de **explorar los límites de la colaboración con la Inteligencia Artificial** en el desarrollo de
+      software. Quería poner a prueba la capacidad de la IA para construir una aplicación web moderna, utilizando
+      algunas de las últimas tecnologías del mercado como Angular 19 y Tailwind CSS, **escribiendo el menor código
+      posible de mi parte**. Mi enfoque fue guiar a la IA a través de prompts detallados, pasarle imágenes de un
+      template estático y solicitarle que realizara la maquetación en HTML y Tailwind. Para esta experimentación, evalué
+      y comparé el rendimiento de diferentes modelos de IA, incluyendo **OpenAI, Gemini y DeepSeek**, analizando cuál
+      resolvía mejor las tareas de desarrollo planteadas.
     </p>
     <p>
-      Es innegable que para aprovechar al máximo estas herramientas, no solo es crucial **saber CÓMO pedirle a la IA que desarrolle lo solicitado**, formulando prompts claros y precisos, sino también, y esto a menudo pasa desapercibido, **saber QUÉ pedirle**. La capacidad de discernir qué partes del desarrollo son delegables a la IA y cuáles requieren un enfoque humano, junto con la habilidad para estructurar esas peticiones, se convierte en una habilidad fundamental para el desarrollador moderno.
+      Por otro lado, esta web sirve como una **ventana profesional hacia reclutadores y colegas**. Es un espacio donde
+      no solo muestro mis proyectos, sino que también evidencio mi actividad y conocimiento en ciertas tecnologías, la
+      aplicación de patrones de diseño, mi compromiso con el código limpio y mi interés en la mejora continua.
     </p>
     <p>
-      Este desarrollo se realizó principalmente a través de la interacción directa con prompts en modelos de lenguaje. No obstante, anticipo un futuro cercano donde la integración de estas capacidades directamente en los entornos de desarrollo será estándar. De hecho, tengo planes de empezar a explorar desarrollos similares utilizando entornos como **Windsurf** o **Cursor**, que ya incorporan chats y asistentes de IA directamente en el IDE. Lamento que Visual Studio, mi IDE preferido para el desarrollo de Backend con .NET, aún no cuente con este tipo de chats incorporados, lo que sin duda aumentaría la eficiencia. Pero, ¿quién dice que pronto no tendremos algo así? La evolución es constante.
+      Finalmente, esta plataforma se concibió como un **ejercicio de aprendizaje continuo y una bitácora personal**. Mi
+      objetivo es tener un lugar centralizado donde pueda documentar y organizar los conocimientos, enlaces y recursos
+      importantes que voy adquiriendo en mi día a día laboral, transformando mis aprendizajes en recursos valiosos para
+      mí y, potencialmente, para la comunidad.
+    </p>
+
+    <h2 class="text-3xl font-semibold mt-8 mb-4">El Cómo: Tecnologías y Proceso</h2>
+    <h3 class="text-2xl font-medium mb-3">La Colaboración con la IA: Un Diálogo Inicial</h3>
+    <p>
+      El punto de partida de este proyecto fue un ejercicio de "prompt engineering". Mi primer paso fue enviar un prompt
+      inicial que, honestamente, no estaba del todo bien redactado, solicitando a la IA que lo puliera y lo hiciera más
+      claro y preciso. La IA demostró una gran capacidad para entender mi intención y refinar mi solicitud.
+    </p>
+    <p>Este fue el prompt final, ya mejorado por la IA, que sirvió como hoja de ruta para todo el desarrollo:</p>
+    <blockquote class="bg-gray-100 border-l-4 border-blue-500 text-gray-700 p-4 pl-6 italic mb-6 rounded-r-lg">
+      <p>
+        "Hola, estoy listo para comenzar a desarrollar mi sitio web personal y portafolio profesional. Mi objetivo es
+        crear una aplicación moderna con Angular (última versión) y Tailwind CSS. Este sitio web incluirá las siguientes
+        secciones principales:
+      </p>
+      <ul>
+        <li>Currículum Vitae (CV): Presentación de mi experiencia profesional, habilidades y educación.</li>
+        <li>
+          Proyectos: Una galería o listado detallado de los proyectos de desarrollo de software en los que he trabajado,
+          con descripciones, tecnologías utilizadas y enlaces (si aplica).
+        </li>
+        <li>
+          Bitácora/Recursos: Una sección para compartir enlaces interesantes, artículos, o pequeñas notas sobre
+          desarrollo de software y tecnologías que encuentro útiles.
+        </li>
+      </ul>
+      <p>
+        Ya cuento con una plantilla HTML/CSS estática que he desarrollado previamente y que servirá como base visual
+        para el diseño del sitio. Mis objetivos clave para este proyecto son:
+      </p>
+      <ul>
+        <li>
+          Desarrollo y Despliegue: Crear la aplicación Angular, integrar la plantilla existente, y finalmente
+          desplegarla en Vercel a partir de un repositorio en GitHub.
+        </li>
+        <li>
+          Aprendizaje Profundo de Angular y Buenas Prácticas: A medida que construimos el sitio, quiero que me guíes y
+          me enseñes:Estructura del Proyecto: Explícame la lógica detrás de la estructura de directorios que propongas,
+          por qué es escalable y mantenible.
+        </li>
+        <li>
+          Conceptos Modernos de Angular: Detalla el uso, importancia y ventajas de características como componentes
+          standalone, signals, servicios, enrutamiento avanzado, lazy loading, manejo de formularios reactivos, e
+          inyección de dependencias.
+        </li>
+        <li>
+          Patrones de Diseño: Identifica y explícame los patrones de diseño (ej. estructurales, creacionales, de
+          comportamiento) que vayamos implementando, tanto a nivel de componente como de aplicación.
+        </li>
+        <li>
+          Integración con Tailwind CSS: Muéstrame las mejores prácticas para configurar y utilizar Tailwind CSS dentro
+          de un proyecto Angular, incluyendo la personalización y optimización (PurgeCSS).
+        </li>
+        <li>Calidad de Código y Pruebas: Si es posible, introduce conceptos básicos de testing en Angular.</li>
+        <li>Optimización para el Despliegue: Consejos para optimizar el build final para Vercel.</li>
+      </ul>
+      <p>Para empezar, por favor, ayúdame con los siguientes pasos iniciales:</p>
+      <ul>
+        <li>
+          ¿Cómo creamos un nuevo proyecto Angular (última versión) configurado desde cero para usar componentes
+          standalone por defecto?
+        </li>
+        <li>
+          ¿Cuál sería la estructura de directorios inicial recomendada para un proyecto de este tipo, pensando en las
+          secciones que te mencioné (CV, Proyectos, Bitácora) y la escalabilidad?
+        </li>
+        <li>¿Cómo integramos Tailwind CSS de manera efectiva en este nuevo proyecto Angular?</li>
+        <li>
+          Una vez configurado el proyecto base y Tailwind, ¿cuál sería el primer paso para empezar a migrar/integrar mi
+          plantilla HTML/CSS existente? Podríamos empezar por el layout principal (cabecera, pie de página, contenedor
+          principal).
+        </li>
+      </ul>
+      <p>Ya instalé Angular y creé el proyecto llamado luciano-ferrari-web"</p>
+    </blockquote>
+
+    <p>
+      A partir de este prompt detallado, la IA pudo guiarme a través de los pasos iniciales, incluyendo la creación del
+      proyecto Angular con componentes standalone y la integración de Tailwind CSS.
+    </p>
+
+    <h3 class="text-2xl font-medium mt-6 mb-3">Estructura del Proyecto: Modularidad y Escalabilidad</h3>
+    <p>
+      Un pedido clave a la IA fue su recomendación sobre la estructura de directorios. Me proporcionó una organización
+      lógica con carpetas como <code>core</code> (para servicios esenciales), <code>shared</code> (para componentes
+      reutilizables como la navegación o tarjetas) y <code>features</code> (para encapsular las secciones principales
+      como CV, Proyectos y Bitácora). Esta estructura fue elegida y explicada por la IA por su contribución a la
+      modularidad, la facilidad de mantenimiento y la escalabilidad, facilitando el lazy loading de módulos y el trabajo
+      en equipo.
+    </p>
+
+    <h3 class="text-2xl font-medium mt-6 mb-3">Maquetación de Componentes con HTML y Tailwind</h3>
+    <p>
+      Un ejemplo claro de la colaboración fue la maquetación de componentes. Le proporcioné a la IA capturas de pantalla
+      de mi plantilla estática, como la siguiente, y le pedí que desarrollara el componente correspondiente en HTML y
+      Tailwind CSS, incluyendo los comandos para su creación:
+    </p>
+    <div class="my-6 text-center">
+      <img
+        src="./assets/example-component.png"
+        alt="Example component"
+        class="w-full max-w-2xl h-auto mx-auto border rounded-lg shadow-md"
+      />
+    </div>
+    <p>
+      La IA generó el código HTML con las clases de Tailwind necesarias y los comandos CLI de Angular para generar los
+      componentes standalone, como el <code>ProjectCardComponent</code>. Este enfoque me permitió enfocarme en la lógica
+      de la aplicación mientras la IA manejaba gran parte del trabajo de maquetación y estilado.
+    </p>
+
+    <h3 class="text-2xl font-medium mt-6 mb-3">Tecnologías Clave del Proyecto</h3>
+    <p>Además de la IA como co-piloto, este proyecto se construyó sobre pilares tecnológicos sólidos:</p>
+    <ul>
+      <li>
+        **Angular 19 (Pre-lanzamiento) y TypeScript**: Elegí la última versión de Angular para explorar sus nuevas
+        funcionalidades y la API de componentes standalone, lo que me permitió escribir código más modular y optimizado.
+        TypeScript garantiza la robustez y la legibilidad del código.
+      </li>
+      <li>
+        **Tailwind CSS**: Para el estilado, opté por Tailwind CSS. Su enfoque de "utility-first" me permitió construir
+        interfaces responsivas de manera extremadamente rápida y mantener una coherencia visual sin escribir CSS
+        personalizado extenso.
+      </li>
+      <li>
+        **Vercel y GitHub**: El despliegue se gestiona a través de Vercel, conectado directamente a un repositorio en
+        GitHub. Esto facilita un flujo de trabajo de integración y despliegue continuo (CI/CD), donde cada push al
+        repositorio dispara un nuevo despliegue en producción.
+      </li>
+    </ul>
+
+    <h3 class="text-2xl font-medium mt-6 mb-3">Patrones de Diseño y Código Limpio</h3>
+    <p>
+      A lo largo del desarrollo, apliqué activamente varios patrones de diseño y principios de código limpio. Por
+      ejemplo, utilicé la **Inyección de Dependencias** de Angular para gestionar los servicios (como
+      <code>ProjectsService</code> y <code>NotebookSheetService</code>), lo que facilita la prueba y el mantenimiento
+      del código. La estructura de carpetas <code>core</code>, <code>shared</code> y <code>features</code> es un reflejo
+      del principio de **Separación de Intereses** y modularidad.
+    </p>
+    <!-- Aquí puedes insertar la imagen del diagrama de flujo una vez que la tengas lista -->
+    <div class="my-8 text-center">
+      <img
+        src="assets/acerca-del-sitio.webp"
+        alt="Diagrama de Flujo de Creación de la Web con IA"
+        class="w-full max-w-2xl h-auto mx-auto border rounded-lg shadow-md"
+      />
+      <p class="text-sm text-gray-500 mt-2">Diagrama del proceso de desarrollo colaborativo con IA.</p>
+    </div>
+
+    <h2 class="text-3xl font-semibold mt-8 mb-4">Aprendizajes y Reflexiones</h2>
+    <p>
+      La experiencia de desarrollar esta web me ha dejado valiosos aprendizajes sobre la colaboración con la
+      Inteligencia Artificial. La IA ha demostrado ser una herramienta de apoyo inmensamente útil, capaz de acelerar el
+      proceso de desarrollo de manera significativa. Sin embargo, un hallazgo interesante fue cómo **algunos modelos de
+      IA resolvieron mejor ciertas tareas que otros**, evidenciando las fortalezas y debilidades particulares de cada
+      uno en diferentes contextos.
     </p>
     <p>
-      Finalmente, en cuanto a la adopción de modelos de IA de pago, aún no estoy seguro. Lo que he necesitado resolver hasta ahora lo he logrado con los modelos gratuitos, lo cual es una gran ventaja. Sin embargo, el panorama de la IA avanza rápidamente y las capacidades de los modelos de pago son cada vez más atractivas. Quién sabe si algún día, o cuándo, la necesidad de mayor potencia o funcionalidades específicas me lleve a considerar una suscripción. Por ahora, sigo explorando.
+      Es innegable que para aprovechar al máximo estas herramientas, no solo es crucial **saber CÓMO pedirle a la IA que
+      desarrolle lo solicitado**, formulando prompts claros y precisos, sino también, y esto a menudo pasa
+      desapercibido, **saber QUÉ pedirle**. La capacidad de discernir qué partes del desarrollo son delegables a la IA y
+      cuáles requieren un enfoque humano, junto con la habilidad para estructurar esas peticiones, se convierte en una
+      habilidad fundamental para el desarrollador moderno.
     </p>
-    
-      
-      <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
-        <p class="text-blue-800 font-semibold">¿Interesado en el código fuente? Puedes explorar el repositorio en GitHub:</p>
-        <a href="https://github.com/feyaluciano/luciano-ferrari-web" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center mt-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
-          Ver en GitHub
-          <svg class="ml-2 -mr-0.5 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.419 2.865 8.163 6.839 9.48.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.455-1.154-1.11-1.463-1.11-1.463-.907-.619.069-.607.069-.607 1.004.071 1.532 1.03 1.532 1.03.89 1.529 2.342 1.088 2.91.83.091-.645.349-1.088.636-1.339-2.22-.253-4.555-1.11-4.555-4.945 0-1.091.39-1.984 1.03-2.68-.103-.253-.448-1.27.098-2.65 0 0 .84-.269 2.75 1.026.799-.222 1.644-.333 2.5-.337.854.004 1.699.115 2.5.337 1.909-1.295 2.748-1.026 2.748-1.026.547 1.38.202 2.398.099 2.65.641.696 1.029 1.589 1.029 2.68 0 3.843-2.339 4.688-4.566 4.935.359.309.678.92.678 1.855 0 1.341-.013 2.42-.013 2.752 0 .267.18.579.688.483C17.135 18.164 20 14.419 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-  
+    <p>
+      Este desarrollo se realizó principalmente a través de la interacción directa con prompts en modelos de lenguaje.
+      No obstante, anticipo un futuro cercano donde la integración de estas capacidades directamente en los entornos de
+      desarrollo será estándar. De hecho, tengo planes de empezar a explorar desarrollos similares utilizando entornos
+      como **Windsurf** o **Cursor**, que ya incorporan chats y asistentes de IA directamente en el IDE. Lamento que
+      Visual Studio, mi IDE preferido para el desarrollo de Backend con .NET, aún no cuente con este tipo de chats
+      incorporados, lo que sin duda aumentaría la eficiencia. Pero, ¿quién dice que pronto no tendremos algo así? La
+      evolución es constante.
+    </p>
+    <p>
+      Finalmente, en cuanto a la adopción de modelos de IA de pago, aún no estoy seguro. Lo que he necesitado resolver
+      hasta ahora lo he logrado con los modelos gratuitos, lo cual es una gran ventaja. Sin embargo, el panorama de la
+      IA avanza rápidamente y las capacidades de los modelos de pago son cada vez más atractivas. Quién sabe si algún
+      día, o cuándo, la necesidad de mayor potencia o funcionalidades específicas me lleve a considerar una suscripción.
+      Por ahora, sigo explorando.
+    </p>
+
+    <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+      <p class="text-blue-800 font-semibold">
+        ¿Interesado en el código fuente? Puedes explorar el repositorio en GitHub:
+      </p>
+      <a
+        href="https://github.com/feyaluciano/luciano-ferrari-web"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center mt-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+      >
+        Ver en GitHub
+        <svg class="ml-2 -mr-0.5 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M10 0C4.477 0 0 4.477 0 10c0 4.419 2.865 8.163 6.839 9.48.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.455-1.154-1.11-1.463-1.11-1.463-.907-.619.069-.607.069-.607 1.004.071 1.532 1.03 1.532 1.03.89 1.529 2.342 1.088 2.91.83.091-.645.349-1.088.636-1.339-2.22-.253-4.555-1.11-4.555-4.945 0-1.091.39-1.984 1.03-2.68-.103-.253-.448-1.27.098-2.65 0 0 .84-.269 2.75 1.026.799-.222 1.644-.333 2.5-.337.854.004 1.699.115 2.5.337 1.909-1.295 2.748-1.026 2.748-1.026.547 1.38.202 2.398.099 2.65.641.696 1.029 1.589 1.029 2.68 0 3.843-2.339 4.688-4.566 4.935.359.309.678.92.678 1.855 0 1.341-.013 2.42-.013 2.752 0 .267.18.579.688.483C17.135 18.164 20 14.419 20 10c0-5.523-4.477-10-10-10z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
     </div>
   </div>
-  
+</div>

@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-home-header',
   imports: [],
   templateUrl: './home-header.component.html',
-  styleUrl: './home-header.component.css'
+  styleUrl: './home-header.component.css',
 })
-export class HomeHeaderComponent {
-
-}
+export class HomeHeaderComponent {}

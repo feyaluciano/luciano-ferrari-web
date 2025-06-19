@@ -20,10 +20,10 @@ import { ProjectItem } from '../../models/project-item.interface';
 
 @Component({
   selector: 'app-project-card', // Selector que se usará en el HTML de otros componentes (<app-project-card>)
-  standalone: true,              // Este componente es standalone, no necesita un NgModule
-  imports: [CommonModule],       // Importa módulos que proporcionan directivas comunes de Angular
+  standalone: true, // Este componente es standalone, no necesita un NgModule
+  imports: [CommonModule], // Importa módulos que proporcionan directivas comunes de Angular
   templateUrl: './project-card.component.html', // ¡Enlaza al archivo HTML externo!
-  styleUrls: ['./project-card.component.css']  // Enlaza al archivo CSS externo (puede estar vacío)
+  styleUrls: ['./project-card.component.css'], // Enlaza al archivo CSS externo (puede estar vacío)
 })
 export class ProjectCardComponent {
   /**

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,inject } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Necesario para *ngIf, *ngFor
 import { RouterModule, RouterLink } from '@angular/router'; // Necesario para [routerLink]
 
@@ -16,22 +16,24 @@ import { NotebookItem } from '../../models/notebook-item.interface'; // Asegúra
   imports: [
     CommonModule, // Añadir CommonModule
     RouterModule, // Añadir RouterModule (ya lo tenías, pero es bueno recordarlo)
-    RouterLink,   // Añadir RouterLink explícitamente si usas standalone y routerLink
+    RouterLink, // Añadir RouterLink explícitamente si usas standalone y routerLink
     HomeHeaderComponent,
-    SubscriptionPanelComponent
+    SubscriptionPanelComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
-
   // Propiedad para controlar la solapa activa
   selectedTab: 'enlaces' | 'diario-tecnico' | 'codigo-con-opinion' = 'enlaces';
 
   // Array para almacenar los ítems filtrados que se mostrarán en la solapa activa
   filteredNotebookItems: NotebookItem[] = [];
 
-  constructor(private bitacoraService: NotebookSheetService) { } // Inyecta el servicio
+
+  private bitacoraService = inject(NotebookSheetService);
+
+  // Inyecta el servicio
 
   ngOnInit(): void {
     // Al inicializar el componente, carga los ítems de la solapa por defecto
@@ -52,14 +54,14 @@ export class HomeComponent implements OnInit {
    */
   private loadItemsForSelectedTab(): void {
     this.bitacoraService.getNotebookItems(this.selectedTab).subscribe({
-      next: (items) => {
+      next: (items: NotebookItem[]) => {
         this.filteredNotebookItems = items;
         console.log(`Items cargados para la solapa '${this.selectedTab}':`, this.filteredNotebookItems);
       },
-      error: (err) => {
+      error: (err:unknown) => {
         console.error(`Error al cargar ítems para la solapa '${this.selectedTab}':`, err);
         // Aquí podrías mostrar un mensaje de error en la UI
-      }
+      },
     });
   }
 
@@ -77,4 +79,3 @@ export class HomeComponent implements OnInit {
     return ['/bitacora', item.id];
   }
 }
-

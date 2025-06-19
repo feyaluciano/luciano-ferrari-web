@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,10 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './about-this-site.component.html',
-  styleUrls: ['./about-this-site.component.css']
+  styleUrls: ['./about-this-site.component.css'],
 })
-export class AboutThisSiteComponent implements OnInit {
-  constructor() { }
-  ngOnInit(): void {
-  }
+export class AboutThisSiteComponent {
+  constructor() {}
+
 }

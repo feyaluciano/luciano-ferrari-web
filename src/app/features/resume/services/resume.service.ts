@@ -4,13 +4,10 @@ import { delay, map } from 'rxjs/operators'; // 'delay' para simular latencia de
 import { EducationItem } from '../models/education-item.interface';
 import { ExperienceItem } from '../models/experience-item.interface';
 
-
-
 @Injectable({
-  providedIn: 'root' // Este servicio se proveerá en la raíz, disponible en toda la aplicación
+  providedIn: 'root', // Este servicio se proveerá en la raíz, disponible en toda la aplicación
 })
 export class ResumeService {
-
   // Array privado que contiene todos los ítems de los proyectos.
   // Esto simula una base de datos o una fuente de datos externa.
   private educationData: EducationItem[] = [
@@ -21,8 +18,9 @@ export class ResumeService {
       endDate: 'DIC 2000',
       degree: 'Licenciatura en Sistemas',
       university: 'Universidad Nacional de La Plata',
-      description: 'Carrera orientada al análisis, diseño y desarrollo de sistemas informáticos, con fuerte base en matemática, programación y teoría de la computación.',
-      order: 1
+      description:
+        'Carrera orientada al análisis, diseño y desarrollo de sistemas informáticos, con fuerte base en matemática, programación y teoría de la computación.',
+      order: 1,
     },
     {
       id: '2',
@@ -32,12 +30,9 @@ export class ResumeService {
       degree: 'Bachiller con orientación en Exactas y Naturales',
       university: 'Escuela de Enseñanza Media N° 1',
       description: 'Formación secundaria con enfoque en ciencias exactas, matemática, física y biología.',
-      order: 2
-    }
-
-
+      order: 2,
+    },
   ];
-
 
   private experienceData: ExperienceItem[] = [
     {
@@ -52,10 +47,10 @@ export class ResumeService {
         'Implementación de microservicios con .NET Core, Kafka y NiFi.',
         'Aplicación del patrón publicador-subscriptor con Kafka para mensajería asíncrona.',
         'Configuración de flujos de datos en NiFi para la orquestación y transformación de información.',
-        'Integración de bases de datos SQL Server y MongoDB para almacenamiento de datos.'
+        'Integración de bases de datos SQL Server y MongoDB para almacenamiento de datos.',
       ],
       technologies: ['.NET Core', 'Microservicios', 'Kafka', 'Apache NiFi', 'SQL Server', 'MongoDB'],
-      order: 3
+      order: 3,
     },
     {
       id: 'exp-2',
@@ -64,13 +59,14 @@ export class ResumeService {
       endDate: 'ACTUALIDAD',
       position: 'Desarrollador Full Stack',
       company: 'CETAP',
-      description: 'Participación en el desarrollo y mantenimiento de soluciones críticas para la gestión de incidentes medioambientales y riesgos, utilizando tecnologías Angular, Vue 3 y .NET.',
+      description:
+        'Participación en el desarrollo y mantenimiento de soluciones críticas para la gestión de incidentes medioambientales y riesgos, utilizando tecnologías Angular, Vue 3 y .NET.',
       responsibilities: [
         'Desarrollo y mantenimiento de un backoffice en Angular para la gestión de incidentes medioambientales.',
-        'Implementación de nuevas funcionalidades para el producto principal de la empresa, enfocado en la gestión de riesgos. Utilizando Vue 3 y .Net'
+        'Implementación de nuevas funcionalidades para el producto principal de la empresa, enfocado en la gestión de riesgos. Utilizando Vue 3 y .Net',
       ],
-      technologies: ['Angular', 'TypeScript', 'Vue3', 'SQL Server','.NET'],
-      order: 1
+      technologies: ['Angular', 'TypeScript', 'Vue3', 'SQL Server', '.NET'],
+      order: 1,
     },
     {
       id: 'exp-3',
@@ -79,15 +75,16 @@ export class ResumeService {
       endDate: 'ACTUALIDAD',
       position: 'Desarrollador Full Stack',
       company: 'Autónomo',
-      description: 'Desarrollo Full Stack con Angular/Vue 3, .NET y SQL Server, y aplicaciones para celulares para diversos clientes.',
+      description:
+        'Desarrollo Full Stack con Angular/Vue 3, .NET y SQL Server, y aplicaciones para celulares para diversos clientes.',
       responsibilities: [
         'Desarrollo de Landing Pages para instituciones y clientes en general.',
         'Desarrollo backend con .NET 6 y .NET Core, implementando servicios con Apache Kafka y Apache Nifi.',
         'Uso de herramientas de CI/CD y calidad de código como Jenkins, Veracode y SonarQube.',
-        'Trabajo bajo metodologías Ágiles para la entrega continua de valor.'
+        'Trabajo bajo metodologías Ágiles para la entrega continua de valor.',
       ],
       technologies: ['.NET 6', 'Angular', 'Laravel', 'php', 'Mysql', 'SQL Server'],
-      order: 2
+      order: 2,
     },
     {
       id: 'exp-4',
@@ -108,10 +105,10 @@ export class ResumeService {
         'Implementación del **sistema de turnos "Sabatto"**.',
         'Desarrollo de un **sistema de reclamos** para control urbano.',
         'Gestión e implementación de la descarga de **tasas municipales**.',
-        'Desarrollo del sistema de acreditación para **estacionamiento medido**.'
+        'Desarrollo del sistema de acreditación para **estacionamiento medido**.',
       ],
       technologies: ['PHP', 'C#', 'Web API', 'Entity Framework', 'MySQL', 'SQL Server'],
-      order: 4
+      order: 4,
     },
     {
       id: 'exp-5',
@@ -124,14 +121,14 @@ export class ResumeService {
       responsibilities: [
         'Desarrollo de páginas web dinámicas.',
         'Maquetación de diseños a partir de requerimientos.',
-        'Mantenimiento de bases de datos para los sitios.'
+        'Mantenimiento de bases de datos para los sitios.',
       ],
       technologies: ['PHP', 'MySQL', 'ASP', 'HTML', 'CSS'],
-      order: 5
-    }
+      order: 5,
+    },
   ];
 
-  constructor() { }
+  constructor() {}
 
   /**
    * Obtiene todos los ítems de proyectos, ordenados por el campo 'order'.
@@ -139,13 +136,14 @@ export class ResumeService {
    * @returns Un Observable que emite un array de ProjectItem.
    */
   getEducation(): Observable<EducationItem[]> {
-    return of([...this.educationData]).pipe( // Usamos 'of' para crear un Observable
+    return of([...this.educationData]).pipe(
+      // Usamos 'of' para crear un Observable
       delay(300), // Simula latencia de red
       map((projects: EducationItem[]) => {
         // Ordena los proyectos basándose en el campo 'order'.
         // Los proyectos sin 'order' o con el mismo orden se ordenarán por su posición original.
         return projects.sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity));
-      })
+      }),
     );
   }
 
@@ -156,19 +154,19 @@ export class ResumeService {
    * @returns Un Observable que emite el ProjectItem encontrado o undefined si no existe.
    */
   getEducationById(id: string): Observable<EducationItem | undefined> {
-    const foundProject = this.educationData.find(edu => edu.id === id);
+    const foundProject = this.educationData.find((edu) => edu.id === id);
     // Retorna un Observable para simular asincronía
     return of(foundProject).pipe(delay(200));
   }
 
-
   getExperience(): Observable<ExperienceItem[]> {
-    return of([...this.experienceData]).pipe( // Usamos 'of' para crear un Observable
+    return of([...this.experienceData]).pipe(
+      // Usamos 'of' para crear un Observable
       delay(300), // Simula latencia de red
       map((experience: ExperienceItem[]) => {
         // Ordena las experiencias basándose en el campo 'order'.
         return experience.sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity));
-      })
+      }),
     );
   }
 
@@ -179,7 +177,7 @@ export class ResumeService {
    * @returns Un Observable que emite el ExperienceItem encontrado o undefined si no existe.
    */
   getExperienceById(id: string): Observable<ExperienceItem | undefined> {
-    const foundExperience = this.experienceData.find(exp => exp.id === id);
+    const foundExperience = this.experienceData.find((exp) => exp.id === id);
     // Retorna un Observable para simular asincronía
     return of(foundExperience).pipe(delay(200));
   }

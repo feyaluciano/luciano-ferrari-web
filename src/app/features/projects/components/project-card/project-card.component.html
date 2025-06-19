@@ -6,54 +6,55 @@
      - h-full, flex, flex-col: Asegura que la tarjeta ocupe toda la altura disponible y su contenido se apile verticalmente.
 -->
 <div class="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition relative h-full flex flex-col">
-    <div class="flex items-center justify-between mb-4">
-      <!-- Contenedor para la imagen del logo del proyecto.
+  <div class="flex items-center justify-between mb-4">
+    <!-- Contenedor para la imagen del logo del proyecto.
            - w-12 h-12: Tamaño del contenedor.
            - bg-gray-100 rounded-full border border-gray-300 overflow-hidden: Estilos del círculo.
       -->
-      <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full border border-gray-300 overflow-hidden">
-        <!-- Imagen del proyecto.
+    <div
+      class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full border border-gray-300 overflow-hidden"
+    >
+      <!-- Imagen del proyecto.
              - [src]: Enlaza dinámicamente la URL de la imagen desde la propiedad 'project'.
              - [alt]: Enlaza el texto alternativo para accesibilidad.
              - w-full h-full object-cover: Asegura que la imagen cubra el contenedor.
         -->
-        <img [src]="project.imageUrl" [alt]="project.title" class="w-full h-full object-cover" />
-      </div>
-      <!-- Etiqueta de tecnologías.
+      <img [src]="project.imageUrl" [alt]="project.title" class="w-full h-full object-cover" />
+    </div>
+    <!-- Etiqueta de tecnologías.
            - *ngIf="project.tecnologies": Renderiza este span solo si la propiedad 'tecnologies' existe.
            - bg-green-100, text-green-700, text-xs, font-semibold, px-2 py-1, rounded-full: Estilos de la etiqueta.
       -->
-      <span *ngIf="project.tecnologies" class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">
-        {{ project.tecnologies }}
-      </span>
-    </div>
-  
-    <!-- Título del proyecto. -->
-    <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ project.title }}</h3>
-  
-    <!-- Descripción breve del proyecto.
+    <span *ngIf="project.tecnologies" class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">
+      {{ project.tecnologies }}
+    </span>
+  </div>
+
+  <!-- Título del proyecto. -->
+  <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ project.title }}</h3>
+
+  <!-- Descripción breve del proyecto.
          - flex-grow: Permite que este párrafo ocupe el espacio vertical disponible, empujando el enlace hacia abajo.
     -->
-    <p class="text-gray-600 mb-6 text-sm flex-grow">{{ project.description }}</p>
-    
-    <!-- Contenedor para el enlace externo.
+  <p class="text-gray-600 mb-6 text-sm flex-grow">{{ project.description }}</p>
+
+  <!-- Contenedor para el enlace externo.
          - *ngIf="project.externalLink": Muestra este div solo si hay un enlace externo.
          - absolute bottom-4 right-4: Posiciona el div de forma absoluta en la esquina inferior derecha de la tarjeta.
          - text-blue-500: Color del icono.
     -->
-    <div *ngIf="project.externalLink" class="absolute bottom-4 right-4 text-blue-500">
-      <!-- Enlace real del proyecto.
+  <div *ngIf="project.externalLink" class="absolute bottom-4 right-4 text-blue-500">
+    <!-- Enlace real del proyecto.
            - [href]: Enlaza dinámicamente la URL externa.
            - target="_blank": Abre el enlace en una nueva pestaña.
            - rel="noopener noreferrer": Mejora la seguridad al abrir nuevas pestañas.
            - class="block": Asegura que el enlace sea un bloque para que el SVG sea clickeable.
       -->
-      <a [href]="project.externalLink" target="_blank" rel="noopener noreferrer" class="block">
-        <!-- Ícono SVG para indicar un enlace externo (un cuadrado con una flecha). -->
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-        </svg>
-      </a>
-    </div>
+    <a [href]="project.externalLink" target="_blank" rel="noopener noreferrer" class="block">
+      <!-- Ícono SVG para indicar un enlace externo (un cuadrado con una flecha). -->
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+      </svg>
+    </a>
   </div>
-  
+</div>
