@@ -1,4 +1,4 @@
-import { Component, OnInit,inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Necesario para *ngIf, *ngFor
 import { RouterModule, RouterLink } from '@angular/router'; // Necesario para [routerLink]
 
@@ -27,9 +27,10 @@ export class HomeComponent implements OnInit {
   // Propiedad para controlar la solapa activa
   selectedTab: 'enlaces' | 'diario-tecnico' | 'codigo-con-opinion' = 'enlaces';
 
+  private variable1: string;
+
   // Array para almacenar los ítems filtrados que se mostrarán en la solapa activa
   filteredNotebookItems: NotebookItem[] = [];
-
 
   private bitacoraService = inject(NotebookSheetService);
 
@@ -58,7 +59,7 @@ export class HomeComponent implements OnInit {
         this.filteredNotebookItems = items;
         console.log(`Items cargados para la solapa '${this.selectedTab}':`, this.filteredNotebookItems);
       },
-      error: (err:unknown) => {
+      error: (err: unknown) => {
         console.error(`Error al cargar ítems para la solapa '${this.selectedTab}':`, err);
         // Aquí podrías mostrar un mensaje de error en la UI
       },
