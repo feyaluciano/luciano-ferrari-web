@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   selectedTab: 'enlaces' | 'diario-tecnico' | 'codigo-con-opinion' = 'enlaces';
 
   private variable22: string;
+  
 
   // Array para almacenar los ítems filtrados que se mostrarán en la solapa activa
   filteredNotebookItems: NotebookItem[] = [];
@@ -39,6 +40,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     // Al inicializar el componente, carga los ítems de la solapa por defecto
     this.loadItemsForSelectedTab();
+  }
+
+  function testFunction() {
+    const   unformattedVariable2  =   'hello'; // Mal formateado y variable sin usar
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const _anotherUnusedVariable = 'world'; // Se ignora por el prefijo '_'
   }
 
   /**
