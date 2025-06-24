@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   // Propiedad para controlar la solapa activa
   selectedTab: 'enlaces' | 'diario-tecnico' | 'codigo-con-opinion' = 'enlaces';
 
-  private variable1: string;
+  private variable22: string;
 
   // Array para almacenar los ítems filtrados que se mostrarán en la solapa activa
   filteredNotebookItems: NotebookItem[] = [];
