@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   }
 
   function testFunction() {
-    const   unformattedVariable2  =   'hello'; // Mal formateado y variable sin usar
+    const   unformattedVariable3  =   'hello'; // Mal formateado y variable sin usar
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const _anotherUnusedVariable = 'world'; // Se ignora por el prefijo '_'
   }
