@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeHeaderComponent } from '../../../home/components/home-header/home-header.component';
 import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
@@ -18,8 +18,8 @@ export class NotebookSheetComponent implements OnInit {
   notebookItem: NotebookItem | undefined;
   isLoading: boolean = true;
   error: string | null = null;
-  private notebookSheetService = Inject(NotebookSheetService);
-  private route = Inject(ActivatedRoute);
+  private notebookSheetService = inject(NotebookSheetService);
+  readonly route = inject(ActivatedRoute); // usando `inject` (con minúscula)
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
