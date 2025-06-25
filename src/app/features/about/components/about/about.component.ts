@@ -7,6 +7,4 @@ import { SubscriptionPanelComponent } from '../../../../shared/components/subscr
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
-export class AboutComponent   {
- 
-}
+export class AboutComponent {}
