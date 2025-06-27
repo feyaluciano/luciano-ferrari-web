@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectItem } from '../../models/project-item.interface';
+import { ProjectItem } from '@/features/projects/models/project-item.interface';
 
 @Component({
   selector: 'app-project-item',

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProjectItem } from '../../models/project-item.interface';
-import { ProjectsService } from '../../services/projects.service';
-import { HomeHeaderComponent } from '../../../home/components/home-header/home-header.component';
-import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
+import { ProjectItem } from '@/features/projects/models/project-item.interface';
+import { ProjectsService } from '@/features/projects/services/projects.service';
+import { HomeHeaderComponent } from '@/features/home/components/home-header/home-header.component';
+import { SubscriptionPanelComponent } from '@/shared/components/subscription-panel/subscription-panel.component';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { ProjectItemComponent } from '../project-item/project-item.component';
+import { ProjectItemComponent } from '@/features/projects/components/project-item/project-item.component';
 
 @Component({
   selector: 'app-projects',

@@ -1,11 +1,11 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeHeaderComponent } from '../../../home/components/home-header/home-header.component';
-import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
+import { HomeHeaderComponent } from '@/features/home/components/home-header/home-header.component';
+import { SubscriptionPanelComponent } from '@/shared/components/subscription-panel/subscription-panel.component';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { NotebookSheetService } from '../../services/notebook-sheet.service';
-import { NotebookItem } from '../../models/notebook-item.interface';
+import { NotebookItem } from '@/features/home/models/notebook-item.interface';
 
 @Component({
   selector: 'app-notebook-sheet',

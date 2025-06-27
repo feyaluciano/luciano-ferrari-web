@@ -1,22 +1,6 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-project-card',
-//   imports: [],
-//   templateUrl: './project-card.component.html',
-//   styleUrl: './project-card.component.css'
-// })
-// export class ProjectCardComponent {
-
-// }
-// src/app/shared/components/project-card/project-card.component.ts
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Necesario para directivas como *ngIf
-// Importa la interfaz ProjectItem. Asegúrate de que la ruta sea correcta
-// Si ProjectItem está en projects.service.ts:
-import { ProjectItem } from '../../models/project-item.interface';
-// Si moviste ProjectItem a src/app/shared/models/project-item.interface.ts:
-// import { ProjectItem } from '../../models/project-item.interface';
+import { ProjectItem } from '@/features/projects/models/project-item.interface';
 
 @Component({
   selector: 'app-project-card', // Selector que se usará en el HTML de otros componentes (<app-project-card>)

@@ -7,8 +7,8 @@ import { HomeHeaderComponent } from '../home-header/home-header.component';
 import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
 
 // Importa el servicio de la bitácora y su interfaz
-import { NotebookSheetService } from '../../services/notebook-sheet.service'; // Asegúrate de la ruta correcta
-import { NotebookItem } from '../../models/notebook-item.interface'; // Asegúrate de la ruta correcta
+import { NotebookSheetService } from '@/features/home/services/notebook-sheet.service'; // Asegúrate de la ruta correcta
+import { NotebookItem } from '@/features/home/models/notebook-item.interface'; // Asegúrate de la ruta correcta
 
 @Component({
   selector: 'app-home',

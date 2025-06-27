@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeHeaderComponent } from '../../../home/components/home-header/home-header.component';
-import { SubscriptionPanelComponent } from '../../../../shared/components/subscription-panel/subscription-panel.component';
+import { HomeHeaderComponent } from '@/features/home/components/home-header/home-header.component';
+import { SubscriptionPanelComponent } from '@/shared/components/subscription-panel/subscription-panel.component';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectItem } from '../../models/project-item.interface';
+import { ProjectItem } from '@/features/projects/models/project-item.interface';
 import { Observable } from 'rxjs';
 import { switchMap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
-import { ProjectsService } from '../../services/projects.service';
+import { ProjectsService } from '@/features/projects/services/projects.service';
 
 @Component({
   selector: 'app-project-view',

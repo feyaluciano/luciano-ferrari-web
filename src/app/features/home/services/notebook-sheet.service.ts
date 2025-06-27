@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs'; // 'of' para crear Observables a partir d
 import { delay } from 'rxjs/operators'; // 'delay' para simular latencia de red
 
 // Importa la interfaz NotebookItem desde la ubicación compartida
-import { NotebookItem } from '../models/notebook-item.interface';
+import { NotebookItem } from '@/features/home/models/notebook-item.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -205,6 +205,55 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
       externalLink: 'notebook-sheet/eslint-prettier-husky',
       content:
         '<p>En los proyectos donde he estado trabajando últimamente, siempre me llamaba la atención un detalle al hacer commit de mis cambios: antes de que el commit se hiciera efectivo, se ejecutaban una serie de validaciones automáticas sobre el código. Sabía que ESLint estaba involucrado, pero nunca tuve del todo claro cómo se configuraban estas validaciones para que se ejecutaran en ese preciso momento, ¡justo antes del commit! Tampoco entendía a fondo qué tipo de validaciones se estaban realizando.</p> <p class="mt-4">Esa curiosidad me llevó a investigar a fondo. Quería entender el "detrás de escena" de estas herramientas y, más importante aún, aprender a replicar esa configuración en mis propios proyectos. Así que me puse manos a la obra y logré configurar un proyecto desde cero utilizando una combinación poderosa de tecnologías: <strong>Prettier</strong>, <strong>ESLint</strong>, <strong>Husky</strong> y <strong>Lint-Staged</strong>.</p> <h3 class="text-xl font-semibold mt-6 mb-4">Configurar Prettier en mi entorno de desarrollo</h3> <p>Yo ya tenía Prettier como plugin de mi Visual Studio Code; es una herramienta a nivel de editor de código, diferente a instalar Prettier con npm install --save-dev prettier, que lo instala como una dependencia de desarrollo.</p> <p class="mt-4">Luego de ejecutar ese comando, creé el archivo .prettierrc.json en la raíz del proyecto y lo configuré de esta manera:</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen1.png" alt="Configuración de Prettier"> </div> <p class="mt-4">Luego, creé el archivo .prettierignore para que Prettier ignore ciertos archivos:</p> # .prettierignore /node_modules /dist /.angular<p class="mt-4">Finalmente, agregué estos scripts al archivo package.json, uno para ejecutar Prettier en todos los archivos y el otro para hacer un chequeo de los archivos sin guardar:</p> // package.json { "scripts": { "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,html}\"", "check-format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,html}\"" } } <h3 class="text-xl font-semibold mt-6 mb-4">Configurar ESLint en mi entorno de desarrollo</h3> <p>Instalé los plugins necesarios: eslint@^8.57.1, eslint-config-prettier@^10.1.5, eslint-plugin-prettier@^5.5.0. Luego, configuré el archivo .eslintrc.cjs de la siguiente manera:</p> <p class="mt-4">Agregué este script a package.json: "check-lint": "eslint \"**/*.{ts,html}\"".</p> <p class="mt-4">Y luego, creé el archivo .eslintrc.cjs con este contenido:</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen2.png" alt="Configuración de ESLint"> </div> <p class="mt-4">Ahora, al ejecutar npm run check-lint, ESLint valida la configuración que le hayamos dado en este archivo y podemos ir corrigiéndolas.</p> <p class="mt-4">Empecé este Diario Técnico diciendo que ESLint se ejecutaba cuando realizaba un commit. Para eso, instalaré <strong>Husky</strong>, que permite ejecutar scripts según ciertos eventos de Git, por ejemplo, en pre-commit.</p> <h3 class="text-xl font-semibold mt-6 mb-4">Configuración de Husky y Lint-Staged</h3> <p>Instalamos npm install --save-dev husky.</p> <p class="mt-4">Luego, ejecutamos npx husky init. Esto creará una carpeta .husky/ en la raíz del proyecto y un script en el package.json.</p> <p class="mt-4">Ahora, uno de los pasos más importantes es configurar el hook pre-commit, pero primero debemos instalar <strong>Lint-Staged</strong>, para poder ejecutar ESLint solo en los archivos que están en el staged y no en todos los archivos. Esto permite no ejecutar ESLint en todos los archivos del proyecto cada vez que se hace un commit.</p> <p class="mt-4">Instalamos Lint-Staged con npm install --save-dev lint-staged y luego en package.json agregamos esta sección:</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen3.png" alt="Configuración de Lint-Staged"> </div> <p class="mt-4">Y solo falta en el archivo .husky/pre-commit agregar esta línea: npm exec lint-staged.</p> <p class="mt-4">Entonces, antes de hacerse el commit, se ejecuta Prettier y modifica los archivos y los guarda, y ejecuta ESLint pero solo muestra los errores para que yo los pueda arreglar. Si queremos que los arregle, o que intente arreglarlo, sería así: eslint --fix.</p> <p class="mt-4">De esta manera, hacemos que nuestro código respete ciertas normas de código limpio y organice los .html, entre otras cosas.</p> <p class="mt-4">Ahora voy a hacer una prueba, voy a crear un método que no usaré y haré un commit, y veremos cómo se ejecuta ESLint, que detecta esa función y nos muestra el error para que lo corrijamos.</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen4.png" alt="Ejemplo de error ESLint en pre-commit"></div> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen5.png" alt="Ejemplo de error ESLint en pre-commit"></div> ',
+    },
+    {
+      id: 'angular-imports-absolutos',
+      date: 'JUN 26, 2025',
+      title: 'Angular y TypeScript: Cómo usé imports absolutos para dejar de pelearme con las rutas relativas',
+      description:
+        'En este Diario Técnico te cuento cómo resolví un problema común en proyectos Angular: los imports con rutas relativas largas. Te muestro paso a paso cómo configuré paths absolutos en tsconfig y mejoré la legibilidad del código.',
+      imageUrl: 'https://placehold.co/600x400/E8F5E9/388E3C?text=Imports+Absolutos+Angular',
+      category: 'diario-tecnico',
+      externalLink: 'notebook-sheet/angular-imports-absolutos',
+      content: `
+      <p>Uno de esos pequeños dolores diarios que acumulamos como desarrolladores es lidiar con los imports relativos en Angular. En un proyecto donde estoy trabajando actualmente, noté que para importar un componente desde otro módulo, terminaba escribiendo cosas como:</p>
+<div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/angular-imports-absolutos/imagen1.png" alt="imagen1"></div>
+
+      <p>Y ese import no era el único así. Tenía varios archivos con <code>../../../</code> y más niveles, lo que no solo es difícil de leer, sino también bastante frágil: si movés un archivo de carpeta, tenés que revisar todos esos imports manualmente.</p>
+    
+      <p>Así que me puse a investigar cómo podía solucionar esto y descubrí que TypeScript (y Angular) permiten configurar <strong>imports absolutos</strong> con algo tan simple como tocar el <p>tsconfig.base.json</p></p>
+    
+      <h3 class="text-xl font-semibold mt-6 mb-4">Configurando imports absolutos: paso a paso</h3>
+      <p>En la raíz del proyecto, abrí el archivo <code>tsconfig.base.json</code> (este archivo es el que Angular usa por defecto para configurar TypeScript). Lo primero que hice fue asegurarme de tener <code>"baseUrl": "src"</code>, y luego definí alias para los paths que uso con más frecuencia:</p>
+    <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/angular-imports-absolutos/imagen2.png" alt="imagen2"></div>
+
+    
+      <p>Con eso configurado, pude cambiar imports como este:</p>
+      <p>import { HomeHeaderComponent } from '../../../home/components/home-header/home-header.component';</p>
+      <p>por algo mucho más limpio:</p>
+      <p>import { HomeHeaderComponent } from 'home/components/home-header/home-header.component';</p>
+    
+      <p>Es mucho más claro desde qué módulo lo estoy trayendo, y además no me preocupo si muevo el archivo actual a otro nivel de carpetas.</p>
+    
+      <h4 class="text-lg font-medium mt-4 mb-2">Bonus: usando alias con @</h4>
+      <p>Para reducir aún más el ruido, podés usar un alias como <code>@</code> para apuntar directamente a <code>app</code>:</p>
+      <pre><code>"paths": {
+      "@/*": ["app/*"]
+    }</code></pre>
+      <p>Y luego:</p>
+      <pre><code>import { SomeComponent } from '@/shared/components/some/some.component';</code></pre>
+    
+      <h4 class="text-lg font-medium mt-4 mb-2">Importante: reiniciar todo</h4>
+      <ul class="list-disc list-inside">
+        <li>Tuve que reiniciar el servidor de Angular (<code>ng serve</code>) para que tome los cambios.</li>
+        <li>También reinicié el TS Server en VS Code: <code>Ctrl+Shift+P → TypeScript: Restart TS Server</code>.</li>
+      </ul>
+    
+      <h3 class="text-xl font-semibold mt-6 mb-4">Conclusión</h3>
+      <p>Este pequeño cambio me simplificó mucho el trabajo diario. Ahora los imports son más legibles, más mantenibles, y si tengo que mover archivos o carpetas, no se rompe todo.</p>
+      <p>Es una de esas cosas que quizás no parecen urgentes, pero que marcan la diferencia cuando el proyecto empieza a escalar.</p>
+    
+      `,
     },
 
     // --- Contenido para la solapa "Código con opinión" ---

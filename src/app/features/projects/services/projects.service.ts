@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs'; // 'of' para crear Observables a partir de valores
 import { delay, map } from 'rxjs/operators'; // 'delay' para simular latencia de red
-import { ProjectItem } from '../models/project-item.interface';
+import { ProjectItem } from '@/features/projects/models/project-item.interface';
 
 @Injectable({
   providedIn: 'root', // Este servicio se proveerá en la raíz, disponible en toda la aplicación
