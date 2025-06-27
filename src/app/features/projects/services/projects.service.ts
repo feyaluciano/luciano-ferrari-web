@@ -119,10 +119,10 @@ export class ProjectsService {
     },
     {
       id: 'cetapp-go',
-      date: 'MAY 2023 - ACTUALIDAD',
+      date: 'MAY 2023',
       title: 'CetApp GO - Solución Web y Móvil de Gestión HSE',
       description:
-        'Desarrollo de nuevas funcionalidades para CetApp GO, una herramienta móvil líder en la digitalización y optimización de la gestión HSE en terreno.',
+        'Desarrollo de nuevas funcionalidades para CetApp GO, una herramienta móvil y web líder en la digitalización y optimización de la gestión HSE en terreno.',
       imageUrl: './assets/experiencia/cetap.png',
       externalLink: 'projects-view/cetapp-go',
       content:
@@ -130,6 +130,20 @@ export class ProjectsService {
       tags: ['.NET', 'Vue3', 'SQL Server', 'Azure', 'Mobile Development', 'HSE'],
       tecnologies: '.NET, Vue3, SQL Server, Azure',
       order: 0,
+    },
+    {
+      id: 'fiesta-ternero',
+      date: 'MAR 2024',
+      title: 'Fiesta Nacional del Ternero – Sitio Web Oficial',
+      description:
+        'Desarrollo completo del sitio web oficial de la Fiesta Nacional del Ternero y Día de la Yerra, integrando diseño moderno, agenda interactiva y gestión dinámica de contenidos.',
+      imageUrl: './assets/proyectos/cabeza.png',
+      externalLink: 'projects-view/fiesta-ternero',
+      content:
+        "Tuve la oportunidad de desarrollar el nuevo **sitio web oficial** de la [Fiesta Nacional del Ternero y Día de la Yerra](https://www.fiestadelternero.org.ar/), un evento tradicional que forma parte de la identidad cultural argentina, celebrado cada año en Ayacucho, provincia de Buenos Aires.\n\nMi responsabilidad fue llevar a cabo el desarrollo **fullstack**, combinando un **frontend moderno en Angular** con un backend robusto en Laravel, integrando una base de datos relacional para almacenar y administrar la información del evento.\n\nEntre las funcionalidades destacadas se encuentran:\n\n- Agenda interactiva con actividades diarias\n- Gestión dinámica de contenidos institucionales\n- Galería multimedia\n- Integración con redes sociales\n- Diseño responsive para experiencia móvil\n\nEste proyecto buscó **reforzar la presencia digital** del evento, ofreciendo una plataforma estable, atractiva y fácil de actualizar para los organizadores y útil para el público asistente.<img  class='block mx-auto max-w-full h-auto shadow-md mt-8 mb-8' src='./assets/proyectos/fiesta-del-ternero.png'>",
+      tags: ['PHP', 'Angular', 'Laravel', 'Fullstack', 'Responsive Design', 'Cultura'],
+      tecnologies: 'Laravel, Angular, MySql, Bootstrap',
+      order: 1,
     },
   ];
 

@@ -219,12 +219,12 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
       <p>Uno de esos pequeños dolores diarios que acumulamos como desarrolladores es lidiar con los imports relativos en Angular. En un proyecto donde estoy trabajando actualmente, noté que para importar un componente desde otro módulo, terminaba escribiendo cosas como:</p>
 <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/angular-imports-absolutos/imagen1.png" alt="imagen1"></div>
 
-      <p>Y ese import no era el único así. Tenía varios archivos con <code>../../../</code> y más niveles, lo que no solo es difícil de leer, sino también bastante frágil: si movés un archivo de carpeta, tenés que revisar todos esos imports manualmente.</p>
+      <p>Y ese import no era el único así. Tenía varios archivos con <p>../../../</p> y más niveles, lo que no solo es difícil de leer, sino también bastante frágil: si movés un archivo de carpeta, tenés que revisar todos esos imports manualmente.</p>
     
       <p>Así que me puse a investigar cómo podía solucionar esto y descubrí que TypeScript (y Angular) permiten configurar <strong>imports absolutos</strong> con algo tan simple como tocar el <p>tsconfig.base.json</p></p>
     
       <h3 class="text-xl font-semibold mt-6 mb-4">Configurando imports absolutos: paso a paso</h3>
-      <p>En la raíz del proyecto, abrí el archivo <code>tsconfig.base.json</code> (este archivo es el que Angular usa por defecto para configurar TypeScript). Lo primero que hice fue asegurarme de tener <code>"baseUrl": "src"</code>, y luego definí alias para los paths que uso con más frecuencia:</p>
+      <p>En la raíz del proyecto, abrí el archivo <p>tsconfig.base.json</p> (este archivo es el que Angular usa por defecto para configurar TypeScript). Lo primero que hice fue asegurarme de tener <p>"baseUrl": "src"</p>, y luego definí alias para los paths que uso con más frecuencia:</p>
     <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/angular-imports-absolutos/imagen2.png" alt="imagen2"></div>
 
     
@@ -237,11 +237,11 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     
       <h4 class="text-lg font-medium mt-4 mb-2">Bonus: usando alias con @</h4>
       <p>Para reducir aún más el ruido, podés usar un alias como <code>@</code> para apuntar directamente a <code>app</code>:</p>
-      <pre><code>"paths": {
+      <p>"paths": {
       "@/*": ["app/*"]
-    }</code></pre>
+    }</p>
       <p>Y luego:</p>
-      <pre><code>import { SomeComponent } from '@/shared/components/some/some.component';</code></pre>
+      <p>import { SomeComponent } from '@/shared/components/some/some.component';</p>
     
       <h4 class="text-lg font-medium mt-4 mb-2">Importante: reiniciar todo</h4>
       <ul class="list-disc list-inside">
