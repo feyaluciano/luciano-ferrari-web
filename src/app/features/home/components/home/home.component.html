@@ -66,7 +66,7 @@
       <!-- Bucle para mostrar los ítems filtrados -->
       <article
         *ngFor="let item of filteredNotebookItems"
-        class="flex flex-col sm:flex-row items-start sm:items-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-200 hover:scale-[1.01]"
+        class="bg-white text-black dark:bg-gray-700 dark:text-white flex flex-col sm:flex-row items-start sm:items-center bg-white p-4 rounded-lg shadow-sm transform transition-transform duration-200 hover:scale-[1.01]"
       >
         <img
           [src]="item.imageUrl"

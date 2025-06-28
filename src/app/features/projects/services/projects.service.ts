@@ -142,7 +142,7 @@ export class ProjectsService {
       content:
         "Tuve la oportunidad de desarrollar el nuevo **sitio web oficial** de la [Fiesta Nacional del Ternero y Día de la Yerra](https://www.fiestadelternero.org.ar/), un evento tradicional que forma parte de la identidad cultural argentina, celebrado cada año en Ayacucho, provincia de Buenos Aires.\n\nMi responsabilidad fue llevar a cabo el desarrollo **fullstack**, combinando un **frontend moderno en Angular** con un backend robusto en Laravel, integrando una base de datos relacional para almacenar y administrar la información del evento.\n\nEntre las funcionalidades destacadas se encuentran:\n\n- Agenda interactiva con actividades diarias\n- Gestión dinámica de contenidos institucionales\n- Galería multimedia\n- Integración con redes sociales\n- Diseño responsive para experiencia móvil\n\nEste proyecto buscó **reforzar la presencia digital** del evento, ofreciendo una plataforma estable, atractiva y fácil de actualizar para los organizadores y útil para el público asistente.<img  class='block mx-auto max-w-full h-auto shadow-md mt-8 mb-8' src='./assets/proyectos/fiesta-del-ternero.png'>",
       tags: ['PHP', 'Angular', 'Laravel', 'Fullstack', 'Responsive Design', 'Cultura'],
-      tecnologies: 'Laravel, Angular, MySql, Bootstrap',
+      tecnologies: 'Laravel, Angular, MySql',
       order: 1,
     },
   ];
