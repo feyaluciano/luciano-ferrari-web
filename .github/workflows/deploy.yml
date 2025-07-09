@@ -65,4 +65,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Le indicamos el directorio que contiene los archivos que queremos publicar.
           # Por defecto, Angular compila el proyecto en 'dist/<nombre-del-proyecto>'.
-          publish_dir: ./dist/luciano-ferrari-web
+          publish_dir: ./dist/luciano-ferrari-web/browser
