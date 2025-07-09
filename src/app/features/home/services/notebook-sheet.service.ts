@@ -64,7 +64,37 @@ export class NotebookSheetService {
 
     // --- Contenido para la solapa "Diario técnico" ---
     // ... (dentro del array notebookData)
-
+    {
+      id: 'diario-github-actions-deploy',
+      date: 'JUL 09, 2025',
+      title: 'Automatizando mi web con GitHub Actions y GitHub Pages',
+      description:
+        'Explorando el poder de GitHub Actions para CI/CD, migré mi sitio personal de Vercel a GitHub Pages, logrando un despliegue continuo y eficiente directamente desde mi repositorio. Esto implicó configurar el repositorio como público y especificar la rama y carpeta de despliegue.',
+      imageUrl: './assets/diario-tecnico/github-actions/github-actions-main.png',
+      category: 'diario-tecnico',
+      externalLink: 'notebook-sheet/diario-github-actions-deploy',
+      content: `
+        <p>Después de completar el bootcamp de **Código Facilito** sobre **GitHub Actions**, sentí la necesidad de aplicar estos conocimientos en un proyecto real y tangible. Mi sitio web personal, que hasta entonces residía en Vercel, se convirtió en el candidato perfecto para una migración.</p>
+        <p class="mt-4">La decisión fue clara: mover mi web a **GitHub Pages** y, lo más importante, automatizar su despliegue usando las capacidades de **GitHub Actions**. Esto no solo me permitió reforzar los conceptos de Integración Continua y Despliegue Continuo (CI/CD) aprendidos, sino que también simplificó enormemente el proceso de actualización de mi sitio.</p>
+        <p class="mt-4">Todo este proceso de reflexión y puesta en práctica **comenzó con un prompt muy específico** que planteé para abordar el desafío de la automatización:</p>
+        <div class="bg-gray-100 p-4 rounded-md text-sm italic border-l-4 border-blue-500 my-4">
+          <p>"Tengo este repositorio de mi web personal desarrollada con Angular 19</p>
+          <p>https://github.com/feyaluciano/luciano-ferrari-web</p>
+          <p>quisiera poder crear un worksflow para que cuando se hace un merge a master, esta web se deploye en github pages.</p>
+          <p>Primero quiero que me hagas preguntas necesarias para que tengas el contexto de mi proyecto para crear correctamente dicho workflow, luego escribiremo el .yaml"</p>
+        </div>
+        <p class="mt-4">Un paso crucial en este proceso fue entender y configurar las particularidades de GitHub Pages. Para que mi sitio fuera accesible públicamente, tuve que asegurarme de que el **repositorio de GitHub fuera público**. Además, fue necesario **especificar en la configuración de GitHub Pages cuál sería la rama (generalmente \`gh-pages\` o \`main\`) y la carpeta raíz (por ejemplo, \`/docs\` o la raíz del repositorio) desde donde se servirían los archivos de mi web ya publicada**.</p>
+        <p class="mt-4">Configuré un flujo de trabajo (workflow) en GitHub Actions que se dispara automáticamente cada vez que se realiza un *push* a la rama principal de mi repositorio. Este workflow se encarga de construir mi aplicación (si fuera necesario), y luego desplegar los archivos estáticos generados directamente en GitHub Pages. Fue una experiencia gratificante ver cómo la teoría se convertía en una solución práctica y eficiente, manejando estos detalles de configuración para un despliegue sin problemas.</p>
+        
+        <div class="mt-8 flex justify-center">
+          <img 
+            class="w-4/5 h-auto rounded-lg shadow-md" 
+            src="./assets/diario-tecnico/github-actions/github-actions-workflow.png" 
+            alt="Ejemplo de workflow de GitHub Actions">
+        </div>
+        <p class="mt-4 text-center text-sm text-gray-600">Este proceso me permitió entender mejor cómo funcionan los pipelines de CI/CD en un entorno real, incluyendo los requisitos específicos de la plataforma de despliegue y cómo un prompt inicial puede guiar la solución.</p>
+      `,
+    },
     {
       id: 'diario-refactor-func-delegates',
       date: 'JUN 10, 2025',
