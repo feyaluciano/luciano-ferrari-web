@@ -7,7 +7,7 @@ on:
   # Si tu rama principal se llama 'master', debes cambiar 'main' por 'master'.
   push:
     branches:
-      - main
+      - master
 
 # Define los permisos que necesitará el trabajo (job) para poder ejecutarse.
 permissions:
