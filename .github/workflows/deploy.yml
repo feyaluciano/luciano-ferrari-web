@@ -1,0 +1,68 @@
+# Nombre del workflow. Este es el nombre que verás en la pestaña "Actions" de tu repositorio.
+name: Deploy a GitHub Pages
+
+# Define el evento que disparará la ejecución de este workflow.
+on:
+  # Se ejecutará cada vez que se suban cambios (push) a la rama 'main'.
+  # Si tu rama principal se llama 'master', debes cambiar 'main' por 'master'.
+  push:
+    branches:
+      - main
+
+# Define los permisos que necesitará el trabajo (job) para poder ejecutarse.
+permissions:
+  contents: write # Es necesario darle permiso de escritura para que pueda publicar en la rama de GitHub Pages.
+
+# Agrupa todos los trabajos que se ejecutarán. Puedes tener varios.
+jobs:
+  # Definimos un único trabajo que llamaremos 'build-and-deploy'.
+  build-and-deploy:
+    # Especifica el sistema operativo de la máquina virtual donde se ejecutará el trabajo. 'ubuntu-latest' es la opción estándar.
+    runs-on: ubuntu-latest
+
+    # Define la secuencia de pasos que se ejecutarán en este trabajo.
+    steps:
+      # Paso 1: Clonar el repositorio.
+      # Este paso descarga el código de tu repositorio en la máquina virtual para poder trabajar con él.
+      - name: Checkout 🛎️
+        # 'uses' indica que vamos a utilizar una "Acción" pre-construida. 'actions/checkout' es la oficial para clonar el código.
+        uses: actions/checkout@v4
+
+      # Paso 2: Configurar Node.js.
+      # Este paso instala la versión de Node.js que necesitas para construir tu proyecto.
+      - name: Setup Node.js ⚙️
+        # Usamos la acción oficial 'actions/setup-node'.
+        uses: actions/setup-node@v4
+        # 'with' permite pasar parámetros a la acción.
+        with:
+          # Le indicamos la versión de Node.js. Usamos '20.x' para ser compatible con tu versión 20.19.2.
+          node-version: '20.x'
+          # Optimiza la gestión de caché para las dependencias de npm, acelerando futuras ejecuciones.
+          cache: 'npm'
+
+      # Paso 3: Instalar las dependencias del proyecto.
+      # Este paso ejecuta 'npm install' para descargar todas las librerías que tu proyecto necesita.
+      - name: Install dependencies 📦
+        run: npm install
+
+      # Paso 4: Construir el proyecto Angular.
+      # Este paso compila tu aplicación de Angular, generando los archivos estáticos listos para producción.
+      - name: Build project 🏗️
+        # 'run' ejecuta un comando de terminal.
+        # 'npx ng build' es el comando para construir.
+        # '--configuration production' asegura que se use la configuración de producción.
+        # '--base-href /luciano-ferrari-web/' es CRUCIAL. Le dice a Angular que la web se servirá desde un subdirectorio.
+        run: npx ng build --configuration production --base-href /luciano-ferrari-web/
+
+      # Paso 5: Desplegar los archivos a GitHub Pages.
+      # Este paso toma los archivos construidos y los publica en la rama especial 'gh-pages' desde donde se sirve tu sitio.
+      - name: Deploy to GitHub Pages 🚀
+        # Usamos una acción popular de la comunidad que simplifica el despliegue.
+        uses: peaceiris/actions-gh-pages@v4
+        # Configuramos esta acción.
+        with:
+          # El 'GITHUB_TOKEN' es una clave secreta que GitHub genera automáticamente para permitir que el workflow actúe en tu nombre.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Le indicamos el directorio que contiene los archivos que queremos publicar.
+          # Por defecto, Angular compila el proyecto en 'dist/<nombre-del-proyecto>'.
+          publish_dir: ./dist/luciano-ferrari-web
