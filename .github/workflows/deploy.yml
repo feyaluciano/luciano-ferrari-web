@@ -52,7 +52,7 @@ jobs:
         # 'npx ng build' es el comando para construir.
         # '--configuration production' asegura que se use la configuración de producción.
         # '--base-href /luciano-ferrari-web/' es CRUCIAL. Le dice a Angular que la web se servirá desde un subdirectorio.
-        run: npx ng build --configuration production --base-href /browser
+        run: npx ng build --configuration production --base-href /luciano-ferrari-web/
  
 
       # Paso 5: Desplegar los archivos a GitHub Pages.
@@ -66,4 +66,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Le indicamos el directorio que contiene los archivos que queremos publicar.
           # Por defecto, Angular compila el proyecto en 'dist/<nombre-del-proyecto>'.
-          publish_dir: ./dist/luciano-ferrari-web
+          publish_dir: ./dist/luciano-ferrari-web/browser
