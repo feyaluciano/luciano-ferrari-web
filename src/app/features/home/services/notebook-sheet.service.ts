@@ -15,7 +15,7 @@ export class NotebookSheetService {
     // --- Contenido para la solapa "Enlaces" ---
     {
       id: '1',
-      date: 'FEB 12, 2020',
+      date: 'FEB 12, 2021',
       title: 'Refactoring.guru',
       description:
         'Es un sitio educativo enfocado en buenas prácticas de programación. Explica de forma clara y visual conceptos como refactorización, patrones de diseño, principios SOLID y malos olores en el código.',
