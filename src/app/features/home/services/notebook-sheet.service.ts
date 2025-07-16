@@ -72,7 +72,7 @@ export class NotebookSheetService {
         'Explorando el poder de GitHub Actions para CI/CD, migré mi sitio personal de Vercel a GitHub Pages, logrando un despliegue continuo y eficiente directamente desde mi repositorio. Esto implicó configurar el repositorio como público y especificar la rama y carpeta de despliegue.',
       imageUrl: './assets/diario-tecnico/github-actions/github-actions-main.png',
       category: 'diario-tecnico',
-      externalLink: '/notebook-sheet/diario-github-actions-deploy',
+      externalLink: 'notebook-sheet/diario-github-actions-deploy',
       content: `
         <p>Después de completar el bootcamp de **Código Facilito** sobre **GitHub Actions**, sentí la necesidad de aplicar estos conocimientos en un proyecto real y tangible. Mi sitio web personal, que hasta entonces residía en Vercel, se convirtió en el candidato perfecto para una migración.</p>
         <p class="mt-4">La decisión fue clara: mover mi web a **GitHub Pages** y, lo más importante, automatizar su despliegue usando las capacidades de **GitHub Actions**. Esto no solo me permitió reforzar los conceptos de Integración Continua y Despliegue Continuo (CI/CD) aprendidos, sino que también simplificó enormemente el proceso de actualización de mi sitio.</p>

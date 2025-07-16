@@ -52,7 +52,7 @@ jobs:
         # 'npx ng build' es el comando para construir.
         # '--configuration production' asegura que se use la configuración de producción.
         # '--base-href /luciano-ferrari-web/' es CRUCIAL. Le dice a Angular que la web se servirá desde un subdirectorio.
-        run: npx ng build --configuration production --base-href /luciano-ferrari-web/
+        run: npx ng build --configuration production 
 
       # Paso 5: Desplegar los archivos a GitHub Pages.
       # Este paso toma los archivos construidos y los publica en la rama especial 'gh-pages' desde donde se sirve tu sitio.
