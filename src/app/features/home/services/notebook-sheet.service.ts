@@ -21,7 +21,7 @@ export class NotebookSheetService {
         'Es un sitio educativo enfocado en buenas prácticas de programación. Explica de forma clara y visual conceptos como refactorización, patrones de diseño, principios SOLID y malos olores en el código.',
       imageUrl: './assets/refactoring-guru.png',
       category: 'enlaces',
-      externalLink: 'notebook-sheet/1', // Enlace real
+      externalLink: '#/notebook-sheet/1', // Enlace real
       content:
         'Refactoring.guru es una referencia indispensable para cualquier desarrollador que busque mejorar la calidad de su código. Sus explicaciones son concisas y sus diagramas, muy útiles.',
     },
@@ -72,7 +72,7 @@ export class NotebookSheetService {
         'Explorando el poder de GitHub Actions para CI/CD, migré mi sitio personal de Vercel a GitHub Pages, logrando un despliegue continuo y eficiente directamente desde mi repositorio. Esto implicó configurar el repositorio como público y especificar la rama y carpeta de despliegue.',
       imageUrl: './assets/diario-tecnico/github-actions/github-actions-main.png',
       category: 'diario-tecnico',
-      externalLink: 'notebook-sheet/diario-github-actions-deploy',
+      externalLink: '#/notebook-sheet/diario-github-actions-deploy',
       content: `
         <p>Después de completar el bootcamp de **Código Facilito** sobre **GitHub Actions**, sentí la necesidad de aplicar estos conocimientos en un proyecto real y tangible. Mi sitio web personal, que hasta entonces residía en Vercel, se convirtió en el candidato perfecto para una migración.</p>
         <p class="mt-4">La decisión fue clara: mover mi web a **GitHub Pages** y, lo más importante, automatizar su despliegue usando las capacidades de **GitHub Actions**. Esto no solo me permitió reforzar los conceptos de Integración Continua y Despliegue Continuo (CI/CD) aprendidos, sino que también simplificó enormemente el proceso de actualización de mi sitio.</p>
@@ -103,7 +103,7 @@ export class NotebookSheetService {
         'Cómo eliminé la duplicación de código en C# al abstraer la lógica común y pasar los métodos específicos del repositorio como delegados Func<>.',
       imageUrl: 'https://placehold.co/600x400/E3F2FD/1976D2?text=Refactoring',
       category: 'diario-tecnico',
-      externalLink: 'notebook-sheet/diario-refactor-func-delegates',
+      externalLink: '#/notebook-sheet/diario-refactor-func-delegates',
       content: `
     <p>Hoy dediqué un tiempo a refactorizar una parte del código que me venía haciendo ruido. Tenía tres métodos en mi capa de <br> servicio que eran casi idénticos.<br>
      Su objetivo era obtener listas de registros para diferentes vistas de una tabla (Mis Registros, Revisiones y Aprobaciones, y Aprobados), pero  <br>la estructura era la misma:<br>
@@ -167,7 +167,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
         'Una herramienta práctica y ligera que simula un servidor SMTP para capturar y visualizar correos electrónicos durante el desarrollo, sin enviarlos realmente.',
       imageUrl: './assets/diario-tecnico/papercut/papercut.png',
       category: 'diario-tecnico',
-      externalLink: 'notebook-sheet/diario-papercut-smtp',
+      externalLink: '#/notebook-sheet/diario-papercut-smtp',
       content: `
         <p>Hoy, desarrollando envio de emails en .net y teniendo que probar como estos eran recibidos y estructurado su mensaje, me encontré con una joya de herramienta para realizar estas pruebas: PaperCut SMTP. Me ha sorprendido lo increíblemente fácil que es de usar. Básicamente, es un servidor SMTP falso que se ejecuta localmente y captura todos los correos que tu aplicación intenta enviar.</p>
         <p class="mt-4">La gran ventaja es que puedes ver cómo se verían los correos (HTML, texto, encabezados, etc.) directamente en su interfaz, sin tener que configurar un servidor de correo real ni arriesgarte a enviar emails de prueba a destinatarios reales. Es ideal para etapas de desarrollo y testing, cuando necesitas verificar que la funcionalidad de envío de correos funciona correctamente sin el lío de gestionar credenciales o servicios de terceros.</p>
@@ -188,7 +188,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
         'Cómo separamos la lógica de notificaciones de un servicio de negocio para cumplir con el Principio de Responsabilidad Única (SRP), resultando en un código más limpio y fácil de mantener.',
       imageUrl: 'https://placehold.co/600x400/E8F5E9/388E3C?text=SRP',
       category: 'diario-tecnico',
-      externalLink: 'notebook-sheet/diario-refactor-srp-service',
+      externalLink: '#/notebook-sheet/diario-refactor-srp-service',
       content: `
         <p>En el desarrollo de software, a menudo nos encontramos con clases o servicios que, con el tiempo, empiezan a acumular más responsabilidades de las que deberían. Esto me pasó recientemente con un <code>ExpedienteService</code>, que además de gestionar todo el ciclo de vida de un expediente (creación, revisión, aprobación), también se encargaba de construir y enviar notificaciones por correo electrónico en cada paso.</p>
         <p class="mt-4">Cada método que cambiaba el estado del expediente terminaba con un bloque de código casi idéntico para enviar un email. Era un "code smell" evidente: el servicio tenía más de una razón para cambiar y el código se estaba volviendo repetitivo y difícil de leer.</p>
@@ -232,7 +232,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
         'Descubre cómo integrar Prettier, ESLint y Husky en tus proyectos para asegurar un código limpio, formato consistente y validaciones automáticas antes de cada commit.',
       imageUrl: 'https://placehold.co/600x400/E3F2FD/1976D2?text=ESLint+Prettier+Husky',
       category: 'diario-tecnico',
-      externalLink: 'notebook-sheet/eslint-prettier-husky',
+      externalLink: '#/notebook-sheet/eslint-prettier-husky',
       content:
         '<p>En los proyectos donde he estado trabajando últimamente, siempre me llamaba la atención un detalle al hacer commit de mis cambios: antes de que el commit se hiciera efectivo, se ejecutaban una serie de validaciones automáticas sobre el código. Sabía que ESLint estaba involucrado, pero nunca tuve del todo claro cómo se configuraban estas validaciones para que se ejecutaran en ese preciso momento, ¡justo antes del commit! Tampoco entendía a fondo qué tipo de validaciones se estaban realizando.</p> <p class="mt-4">Esa curiosidad me llevó a investigar a fondo. Quería entender el "detrás de escena" de estas herramientas y, más importante aún, aprender a replicar esa configuración en mis propios proyectos. Así que me puse manos a la obra y logré configurar un proyecto desde cero utilizando una combinación poderosa de tecnologías: <strong>Prettier</strong>, <strong>ESLint</strong>, <strong>Husky</strong> y <strong>Lint-Staged</strong>.</p> <h3 class="text-xl font-semibold mt-6 mb-4">Configurar Prettier en mi entorno de desarrollo</h3> <p>Yo ya tenía Prettier como plugin de mi Visual Studio Code; es una herramienta a nivel de editor de código, diferente a instalar Prettier con npm install --save-dev prettier, que lo instala como una dependencia de desarrollo.</p> <p class="mt-4">Luego de ejecutar ese comando, creé el archivo .prettierrc.json en la raíz del proyecto y lo configuré de esta manera:</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen1.png" alt="Configuración de Prettier"> </div> <p class="mt-4">Luego, creé el archivo .prettierignore para que Prettier ignore ciertos archivos:</p> # .prettierignore /node_modules /dist /.angular<p class="mt-4">Finalmente, agregué estos scripts al archivo package.json, uno para ejecutar Prettier en todos los archivos y el otro para hacer un chequeo de los archivos sin guardar:</p> // package.json { "scripts": { "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,html}\"", "check-format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,html}\"" } } <h3 class="text-xl font-semibold mt-6 mb-4">Configurar ESLint en mi entorno de desarrollo</h3> <p>Instalé los plugins necesarios: eslint@^8.57.1, eslint-config-prettier@^10.1.5, eslint-plugin-prettier@^5.5.0. Luego, configuré el archivo .eslintrc.cjs de la siguiente manera:</p> <p class="mt-4">Agregué este script a package.json: "check-lint": "eslint \"**/*.{ts,html}\"".</p> <p class="mt-4">Y luego, creé el archivo .eslintrc.cjs con este contenido:</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen2.png" alt="Configuración de ESLint"> </div> <p class="mt-4">Ahora, al ejecutar npm run check-lint, ESLint valida la configuración que le hayamos dado en este archivo y podemos ir corrigiéndolas.</p> <p class="mt-4">Empecé este Diario Técnico diciendo que ESLint se ejecutaba cuando realizaba un commit. Para eso, instalaré <strong>Husky</strong>, que permite ejecutar scripts según ciertos eventos de Git, por ejemplo, en pre-commit.</p> <h3 class="text-xl font-semibold mt-6 mb-4">Configuración de Husky y Lint-Staged</h3> <p>Instalamos npm install --save-dev husky.</p> <p class="mt-4">Luego, ejecutamos npx husky init. Esto creará una carpeta .husky/ en la raíz del proyecto y un script en el package.json.</p> <p class="mt-4">Ahora, uno de los pasos más importantes es configurar el hook pre-commit, pero primero debemos instalar <strong>Lint-Staged</strong>, para poder ejecutar ESLint solo en los archivos que están en el staged y no en todos los archivos. Esto permite no ejecutar ESLint en todos los archivos del proyecto cada vez que se hace un commit.</p> <p class="mt-4">Instalamos Lint-Staged con npm install --save-dev lint-staged y luego en package.json agregamos esta sección:</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen3.png" alt="Configuración de Lint-Staged"> </div> <p class="mt-4">Y solo falta en el archivo .husky/pre-commit agregar esta línea: npm exec lint-staged.</p> <p class="mt-4">Entonces, antes de hacerse el commit, se ejecuta Prettier y modifica los archivos y los guarda, y ejecuta ESLint pero solo muestra los errores para que yo los pueda arreglar. Si queremos que los arregle, o que intente arreglarlo, sería así: eslint --fix.</p> <p class="mt-4">De esta manera, hacemos que nuestro código respete ciertas normas de código limpio y organice los .html, entre otras cosas.</p> <p class="mt-4">Ahora voy a hacer una prueba, voy a crear un método que no usaré y haré un commit, y veremos cómo se ejecuta ESLint, que detecta esa función y nos muestra el error para que lo corrijamos.</p> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen4.png" alt="Ejemplo de error ESLint en pre-commit"></div> <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/eslint-prettier-husky/imagen5.png" alt="Ejemplo de error ESLint en pre-commit"></div> ',
     },
@@ -244,7 +244,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
         'En este Diario Técnico te cuento cómo resolví un problema común en proyectos Angular: los imports con rutas relativas largas. Te muestro paso a paso cómo configuré paths absolutos en tsconfig y mejoré la legibilidad del código.',
       imageUrl: 'https://placehold.co/600x400/E8F5E9/388E3C?text=Imports+Absolutos+Angular',
       category: 'diario-tecnico',
-      externalLink: 'notebook-sheet/angular-imports-absolutos',
+      externalLink: '#/notebook-sheet/angular-imports-absolutos',
       content: `
       <p>Uno de esos pequeños dolores diarios que acumulamos como desarrolladores es lidiar con los imports relativos en Angular. En un proyecto donde estoy trabajando actualmente, noté que para importar un componente desde otro módulo, terminaba escribiendo cosas como:</p>
 <div class="mt-8 flex justify-center"> <img class="max-w-full h-auto rounded-lg shadow-md" src="./assets/diario-tecnico/angular-imports-absolutos/imagen1.png" alt="imagen1"></div>
