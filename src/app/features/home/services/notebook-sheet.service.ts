@@ -15,7 +15,7 @@ export class NotebookSheetService {
     // --- Contenido para la solapa "Enlaces" ---
     {
       id: '1',
-      date: 'FEB 12, 2021',
+      date: 'JUL 12, 2025',
       title: 'Refactoring.guru',
       description:
         'Es un sitio educativo enfocado en buenas prácticas de programación. Explica de forma clara y visual conceptos como refactorización, patrones de diseño, principios SOLID y malos olores en el código.',
@@ -27,7 +27,7 @@ export class NotebookSheetService {
     },
     {
       id: 'enlace-roadmap-sh',
-      date: 'DEC 24, 2023',
+      date: 'JUN 24, 2025',
       title: 'RoadMap.sh',
       description:
         'Es una plataforma colaborativa que ofrece mapas de ruta (roadmaps), guías y recursos educativos para ayudar a los desarrolladores a planificar y seguir un camino de aprendizaje en diversas áreas del desarrollo de software.',
@@ -39,7 +39,7 @@ export class NotebookSheetService {
     },
     {
       id: 'enlace-css-tricks',
-      date: 'MAR 01, 2023',
+      date: 'MAY 02, 2025',
       title: 'CSS-Tricks',
       description:
         'Un blog con miles de artículos sobre CSS, HTML, JavaScript y desarrollo web en general. Es un recurso indispensable para cualquier desarrollador frontend.',
@@ -51,7 +51,7 @@ export class NotebookSheetService {
     },
     {
       id: 'enlace-dev-to',
-      date: 'ENE 20, 2022',
+      date: 'MAY 20, 2025',
       title: 'DEV Community',
       description:
         'Una comunidad de desarrolladores para compartir y descubrir artículos, tutoriales y proyectos. Es un lugar excelente para mantenerse al día y conectar con otros programadores.',
@@ -182,7 +182,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     },
     {
       id: 'diario-refactor-srp-service',
-      date: 'JUN 13, 2025',
+      date: 'JUN 02, 2025',
       title: 'Refactorizando con SRP: De un Servicio Sobrecargado a Código Limpio',
       description:
         'Cómo separamos la lógica de notificaciones de un servicio de negocio para cumplir con el Principio de Responsabilidad Única (SRP), resultando en un código más limpio y fácil de mantener.',
@@ -226,7 +226,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     },
     {
       id: 'eslint-prettier-husky',
-      date: 'JUN 24, 2025',
+      date: 'JUN 02, 2025',
       title: 'Configurando Prettier, ESLint y Husky: Código Limpio y Validaciones Pre-Commit',
       description:
         'Descubre cómo integrar Prettier, ESLint y Husky en tus proyectos para asegurar un código limpio, formato consistente y validaciones automáticas antes de cada commit.',
@@ -238,7 +238,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     },
     {
       id: 'angular-imports-absolutos',
-      date: 'JUN 26, 2025',
+      date: 'MAY 26, 2025',
       title: 'Angular y TypeScript: Cómo usé imports absolutos para dejar de pelearme con las rutas relativas',
       description:
         'En este Diario Técnico te cuento cómo resolví un problema común en proyectos Angular: los imports con rutas relativas largas. Te muestro paso a paso cómo configuré paths absolutos en tsconfig y mejoré la legibilidad del código.',
@@ -289,7 +289,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     // --- Contenido para la solapa "Código con opinión" ---
     {
       id: 'opinion-microfrontends',
-      date: 'JUN 01, 2024',
+      date: 'JUN 20, 2025',
       title: '¿Es el microfrontend la solución para todos?',
       description:
         'Analizando los pros y contras de la arquitectura de microfrontends y cuándo realmente vale la pena adoptarla.',
@@ -300,7 +300,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     },
     {
       id: 'opinion-deuda-tecnica',
-      date: 'ABR 05, 2024',
+      date: 'JUN 05, 2025',
       title: 'La deuda técnica: ¿un mal necesario o evitable?',
       description:
         'Reflexiones sobre la deuda técnica en el desarrollo de software: cómo gestionarla y cuándo aceptarla.',
@@ -311,7 +311,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     },
     {
       id: 'opinion-clean-code',
-      date: 'FEB 28, 2024',
+      date: 'MAY 28, 2025',
       title: 'Clean Code: ¿Dogma o guía práctica?',
       description:
         'Discutiendo la aplicación de los principios de Clean Code en el día a día de un desarrollador y sus límites.',
@@ -322,7 +322,7 @@ En C#, los delegados Func<> y Action<> son perfectos para implementar este tipo 
     },
     {
       id: 'opinion-framework-choice',
-      date: 'NOV 10, 2023',
+      date: 'MAY 10, 2025',
       title: 'Elegir el framework adecuado: más allá del hype',
       description:
         'Mi perspectiva sobre cómo seleccionar el framework o librería de frontend correcto para tu proyecto, sin dejarse llevar por las tendencias.',

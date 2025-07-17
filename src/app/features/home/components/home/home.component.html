@@ -18,20 +18,7 @@
     <!-- Sección de solapas -->
     <div class="flex space-x-6 sm:space-x-8 border-b border-gray-200 mb-8 overflow-x-auto pb-2">
       <!-- Solapa "Enlaces" -->
-      <a
-        tabindex="0"
-        (click)="selectTab('enlaces')"
-        (keydown.enter)="selectTab('enlaces')"
-        (keydown.space)="selectTab('enlaces')"
-        [ngClass]="{
-          'text-blue-500 border-b-2 border-blue-500': selectedTab === 'enlaces',
-          'text-gray-500 hover:text-blue-500': selectedTab !== 'enlaces',
-        }"
-        class="pb-2 font-semibold whitespace-nowrap cursor-pointer transition-colors duration-200"
-      >
-        Enlaces
-      </a>
-      <!-- Solapa "Diario técnico" -->
+
       <a
         tabindex="0"
         (click)="selectTab('diario-tecnico')"
@@ -45,6 +32,21 @@
       >
         Diario técnico
       </a>
+
+      <a
+        tabindex="0"
+        (click)="selectTab('enlaces')"
+        (keydown.enter)="selectTab('enlaces')"
+        (keydown.space)="selectTab('enlaces')"
+        [ngClass]="{
+          'text-blue-500 border-b-2 border-blue-500': selectedTab === 'enlaces',
+          'text-gray-500 hover:text-blue-500': selectedTab !== 'enlaces',
+        }"
+        class="pb-2 font-semibold whitespace-nowrap cursor-pointer transition-colors duration-200"
+      >
+        Enlaces
+      </a>
+
       <!-- Solapa "Código con opinión" -->
       <a
         tabindex="0"

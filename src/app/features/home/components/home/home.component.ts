@@ -25,7 +25,7 @@ import { NotebookItem } from '@/features/home/models/notebook-item.interface'; /
 })
 export class HomeComponent implements OnInit {
   // Propiedad para controlar la solapa activa
-  selectedTab: 'enlaces' | 'diario-tecnico' | 'codigo-con-opinion' = 'enlaces';
+  selectedTab: 'enlaces' | 'diario-tecnico' | 'codigo-con-opinion' = 'diario-tecnico';
 
   // Array para almacenar los ítems filtrados que se mostrarán en la solapa activa
   filteredNotebookItems: NotebookItem[] = [];
